@@ -1,6 +1,6 @@
 ---
 title: "Gov 50 Final Project"
-author: "Your Name Here"
+author: "Isabel Dean"
 description: "My final project"
 output:
   distill::distill_article:
@@ -11,4 +11,4 @@ output:
 
 ## Project thoughts
 
-I am interested in exploring data related to...
+I am interested in exploring data related to finding links between and the effect of screen time usage and online monetary consumption. Assuming that most of individual's screen times are made up of social and entertainment media consumption, it is interesting to think about how much content on these devices are targeted towards getting consumers to spend more money. Whilst social and entertainment media are primarily marketed or were initially developed with the intent to entertain and connect individuals, it seems apparent that platforms are becoming more and more geared towards not only viewer retention rates, but increasing consumption rates. This could be motivated by brands and the apps' profit motive as well as an increase in the number of content creator sponsorships who relay additional marketing onto the consumer. From my personal observations, I would be interested to explore my own assumptions and observe through data if these correlations and links do exist. 
