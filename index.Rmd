@@ -9,6 +9,19 @@ output:
 
 
 
-## Project thoughts
+## Project Thoughts
 
-I am interested in exploring data related to finding links between and the effect of screen time usage and online monetary consumption. Assuming that most of individual's screen times are made up of social and entertainment media consumption, it is interesting to think about how much content on these devices are targeted towards getting consumers to spend more money. Whilst social and entertainment media are primarily marketed or were initially developed with the intent to entertain and connect individuals, it seems apparent that platforms are becoming more and more geared towards not only viewer retention rates, but increasing consumption rates. This could be motivated by brands and the apps' profit motive as well as an increase in the number of content creator sponsorships who relay additional marketing onto the consumer. From my personal observations, I would be interested to explore my own assumptions and observe through data if these correlations and links do exist. 
+I am interested in exploring data related to finding links between the reasons behind not voting, different demographics and participation in elections. Coming from a country that mandates elections, it is interesting to me that countries like America seem to have surprisingly low election participation. I have heard many reasons tossed around, such as access to polling, disparities between different demographics, education and more. Thus, I would like to analyse the different reasons and evident results of voters to discover the main reasons as to why people don't vote.  
+
+## Project Milestone 2 Proposal
+
+What is the main reason that people don't vote? In America's most recent presidential election, only 66% of eligible voters participated in the 2020 election, which was a record high. It is necessary to study why eligible voters are failing to participate in elections, so that we can use this data to locate the measures we can take to increase universal suffrage and voter turnout. Likely, the largest factors that lead people to not vote in elections will be barriers to voting such as waiting in line, taking time off work or missing the voter registration deadline. These factors itself are linked to income group, race, etc which can cause confoundment issues and should be accounted for. My hypothesis from these considerations will be that the largest reason as to why people don't vote will be at the highest intersection between a particular demographic and access to voting, which seems likely to be that lower income groups are least likely to vote due to inaccessibility in participating in elections. My data is taken from the Why Many Americans Don't Vote dataset done by Ipsos for FiveThirtyEight. The variables I'm interested in are Questions 5, 8, 11, 16-18, 20-22, 25, 28, 29, which cover political opinions, trust or distrust of social and political institutions, accessibility to vote, whether or note respondents are registered to vote and reasons to or not to vote. These variables have answer options listed as discrete numbers, thus I can measure the answers that are highest chosen by voters. I will also analyse the variables of respondents including voter_category(consistent, somewhat or never voters), ppage(age of voter), gender(gender of voter), educ(highest education attained), race(race of voter), income_cat(household income category of voter). This categorical data will be used to measure trends amongst different classifications of respondents. My hypothesis would be proved if there was a positive correlation between low income groups and reported inaccessibility to voting, as well as a positive correlation between this respondent group and a failure to vote. If there is a negative or weak correlation that is not statistically significant, then my hypothesis would be disproven. From analysing multiple variables, I may be led to a new conclusion about the demographic and reasons why most people don't vote. 
+
+
+```{r}
+library(tidyverse)
+library(readr)
+nonvoters <- read_csv("nonvoters_data.csv")
+nonvoters
+```
+
