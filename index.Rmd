@@ -35,11 +35,11 @@ library(tidyverse)
 library(readr)
 nonvoters <- read_csv("nonvoters_data.csv")
 
-nonvoters <- nonvoters |>
+nonvoters1 <- nonvoters |>
   group_by(income_cat) |>
-  summarise(Proportion_Not_Voting = mean(Q21== 2))
+  summarise(Proportion_Not_Voting = mean(Q21 == 2))
 
-visualisation_1 <- nonvoters |>
+visualisation_1 <- nonvoters1 |>
   mutate(income_cat = fct_relevel(income_cat, "Less than $40k", "$40-75k", "$75-125k", "$125k or more")) |>
   ggplot(aes(x = income_cat, y = Proportion_Not_Voting)) +
   geom_col() +
@@ -48,5 +48,36 @@ visualisation_1 <- nonvoters |>
        y = "Proportion Planned Not to Vote")
 
 visualisation_1
+```
+
+## Project Milestone 4 Data Analysis
+From the first analysis done in Milestone 3, with 'Proportion of Non-Voters by Income Group', I observed that as income decreases, the likelihood a respondent plans not to vote increases. The highest proportion of those who planned not to vote was 12.8% of respondents who made less than 40,000 a year. With my next analysis, 'Non-Voter Beliefs about Voting Split by Income Group', I aimed to see whether beliefs about voting differed between income groups. Using the variable Q29_3, I found that of those who do not vote, a much higher proportion agree with the statement "No matter who wins, nothing will change for people like me" and find this an important reason as to why they don't vote. However, of those who resonate with this reason and those who don't, the proportions of these groups in terms of income class do not differ greatly. This suggests that attitudes about belonging and change affect those of all income groups- a regression analysis would further reveal the correlation, or lack of correlation between income group and attitudes towards change based on identity groups. My next graph, 'Respondents of different Income Groups Voting Choices' reveals the different proportions of voting choice groups. The column graph illustrates that those in the income group 'Less than 40k' take up higher proportions of those who don't, or sporadically vote than in always voting. This is in contrast to other income groups, which take up similar proportions of always, rarely/never and sporadic groups, demonstrating the disproportionate difference when it comes to the lowest income group not voting. This analysis shows that investigating reasons as to why people don't vote will likely have a correlation to lower income groups, specifically those who make 'Less than 40k' a year. 
+
+```{r}
+library(ggplot2)
+
+nonvoters <- nonvoters |>
+  mutate(reason_disillusioned = if_else(Q29_3 == 1, "No matter who wins, nothing will change for people like me", "Not an Important Factor"), na.rm = TRUE) 
+
+graph_2 <- nonvoters|>
+  filter(reason_disillusioned != 'NA') |>
+  ggplot(mapping = aes(x = reason_disillusioned, fill = income_cat)) +
+  geom_bar() +
+  labs(x = "Non-Voters",
+       y = "Number of Non-Voters",
+       title = "Non-Voter Beliefs about Voting Split by Income Group" )
+
+graph_2
+```
+
+```{r}
+graph_3 <- nonvoters |>
+  ggplot(mapping = aes(x = voter_category, fill = income_cat)) +
+  geom_bar() +
+  labs(y = "Number of Respondents",
+       x = "Voting Choice",
+       title = "Respondents of different Income Groups' Voting Choices")
+
+graph_3
 ```
 
