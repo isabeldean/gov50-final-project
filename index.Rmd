@@ -8,13 +8,13 @@ output:
 ---
 
   ## Introduction
-(1) an introduction where you introduce the research question and hypothesis and briefly describe why it is interesting; 
 
-- Introduction: (2pts)
-    - describe the research question and main hypothesis
-    - describe why it is important. (1-2 paragraphs)
+Is undemocratic government linked to weaker economic development of a country? This study aims to investigate the correlation between the concentration of presidential power and a country's economic performance, as measured by the Gini coefficient. My main hypothesis proposes that there is a positive correlation between greater presidential power and higher Gini coefficients, implying that nations with a more pronounced power imbalance tend to exhibit increased income inequality.
 
-Is Presidential Power linked to the economic development of a country? A form of investigating how liberal a country is is to examine the power balances, or imbalances that lie in the government and the people. The spread of liberalism across a nation is often discussed as a measure of democracy or a form of determining democratic legitimacy. If a country has a severe power imbalance, 
+Throughout history, dictatorships and authoritarian regimes have experienced severe economic hardships. By using presidential power as a lens to examine the illiberalism of a country and the Gini coefficient as a metric for economic development, I seek to examine the intrinsic links between political governance and economic outcomes. My null hypothesis suggests that there is no correlation between greater presidential power and economic development.
+
+Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries. 
+
 
   ## Data
 (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
