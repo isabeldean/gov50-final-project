@@ -1,0 +1,86 @@
+---
+title: "Title"
+author: "Isabel Dean"
+description: "My Final project"
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+## Introduction
+
+
+
+## Data
+
+
+
+## Results
+
+
+
+## Conclusion
+
+
+
+
+
+```{r}
+pres_powers <- read_csv("PrespowData_FINAL.csv")
+
+inequality <- read_csv("inequality.csv")
+
+pres_powers
+
+final_dataset <- pres_powers |> left_join(
+  inequality, by = c("country", "year")
+) |>
+  select(country, year, prespow1, gini_reported, regioncode) |>
+  drop_na() |>
+  filter(regioncode == "Americas")
+
+final_dataset |>
+ knitr::kable(col.names = c("Country", "Year", "Presidential Power", "Gini Coefficient", "Continent"))
+
+```
+
+```{r}
+#(2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
+final_dataset |>
+  ggplot(mapping = aes(x = year, color = country)) +
+  geom_point(mapping = aes(y = gini_reported))
+
+final_dataset
+```
+
+```{r}
+graph_1 <- final_dataset |>
+  ggplot(mapping = aes(y = gini_reported)) +
+  geom_point(mapping = aes(x = prespow1)) +
+  geom_smooth(mapping = aes(x = prespow1), method = "lm", se = FALSE)
+
+
+graph_1
+```
+```{r}
+project_regression <- lm(data = final_dataset, gini_reported ~ prespow1)
+```
+
+```{r}
+library(broom)
+
+glance(project_regression) |>
+  select(r.squared, p.value) |>
+  knitr::kable(col.names = c("R Squared", "P Value"))
+```
+
+```{r}
+project_regression <- lm(data = final_dataset, gini_reported ~ prespow1)
+
+modelsummary::modelsummary(project_regression,
+                           statistic = c("s.e. = {std.error}",
+                                         "p = {p.value}"),
+                           gof_map = c("nobs", "r.squared", "adj.r.squared"))
+```
+
+
