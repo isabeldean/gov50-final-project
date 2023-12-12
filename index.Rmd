@@ -1,7 +1,7 @@
 ---
-title: "Power and Inequality: "
+title: "Power and Inequality: a Study on Democracy and the Economic Development of Nations"
 author: "Isabel Dean"
-description: "My Final project"
+description: "GOV50 Final Project"
 output:
   distill::distill_article:
     self_contained: false
@@ -17,6 +17,12 @@ Understanding this relationship is vital due to its potential implications for g
 
 
 ## Data
+My data is taken from two sources: (1) [Presidential Power Scores](https://presidential-power.net/?page_id=2151) (Doyle, David and Robert Elgie. 2015. Maximizing the reliability of cross-national measures of presidential power. British Journal of Political Science, DOI: 10.1017/S0007123414000465) and (2) [World Income Inequality Database](https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf) - WIID4 (UNU-WIDER, World Income Inequality Database (WIID), 19 December 2018). The explanatory variables of interest are Country, Year, Presidential Power, Gini Coefficient and Continent. From Continent, I then selected from my dataset countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Coefficient, and my independent variable is Presidential Power. These have been measured through a survey. 
+
+Through my cross-sectional design, I hope to analyse the correlation between Presidential Power and higher Gini Coefficients across Latin American countries in the same year, which I have achieved through merging my data sets, joining through country and year. The variables I am measuring are continuous- Presidential Power is measured on a scale of 0-1, with 1 being total Presidential power, whilst the Gini Coefficient is measured on a scale of 0-100, with 100 being complete income inequality. 
+
+
+
 (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
 
 For the data section, you should 
