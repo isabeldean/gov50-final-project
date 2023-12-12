@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Gov 50 Final Project</title>
+  <title>Power and Inequality: </title>
 
   <meta property="description" itemprop="description" content="My Final project"/>
 
@@ -96,26 +96,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="Isabel Dean"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Gov 50 Final Project"/>
+  <meta property="og:title" content="Power and Inequality: "/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="My Final project"/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Gov 50 Final Project"/>
+  <meta property="twitter:title" content="Power and Inequality: "/>
   <meta property="twitter:description" content="My Final project"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Gov 50 Final Project"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Isabel Dean"]}]}]},{"type":"character","attributes":{},"value":["My Final project"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Power and Inequality: "]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name"]}},"value":[{"type":"character","attributes":{},"value":["Isabel Dean"]}]}]},{"type":"character","attributes":{},"value":["My Final project"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","nonvoters_data.csv"]}
+  {"type":"character","attributes":{},"value":["index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-2-1.png","index_files/figure-html5/unnamed-chunk-3-1.png","index_files/figure-html5/unnamed-chunk-4-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.24/header-attrs.js","index_files/header-attrs-2.25/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/kePrint-0.0.1/kePrint.js","index_files/lightable-0.0.1/lightable.css","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","inequality.csv","nonvoters_data.csv","PrespowData_FINAL.csv"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -227,9 +227,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -324,6 +336,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1085,6 +1102,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1162,8 +1185,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1189,12 +1213,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1472,7 +1497,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.24/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.25/header-attrs.js"></script>
+  <script src="index_files/kePrint-0.0.1/kePrint.js"></script>
+  <link href="index_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1493,7 +1520,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Gov 50 Final Project","description":"My Final project","authors":[{"author":"Isabel Dean","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
+{"title":"Power and Inequality: ","description":"My Final project","authors":[{"author":"Isabel Dean","authorURL":"#","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1503,7 +1530,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Gov 50 Final Project</h1>
+<h1>Power and Inequality:</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 <p>My Final project</p>
@@ -1517,99 +1545,1483 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h2 id="project-thoughts">Project Thoughts</h2>
-<p>I am interested in exploring data related to finding links between the reasons behind not voting, different demographics and participation in elections. Coming from a country that mandates elections, it is interesting to me that countries like America seem to have surprisingly low election participation. I have heard many reasons tossed around, such as access to polling, disparities between different demographics, education and more. Thus, I would like to analyse the different reasons and evident results of voters to discover the main reasons as to why people don’t vote.</p>
-<h2 id="project-milestone-2-proposal">Project Milestone 2 Proposal</h2>
-<p>What is the main reason that people don’t vote? In America’s most recent presidential election, only 66% of eligible voters participated in the 2020 election, which was a record high. It is necessary to study why eligible voters are failing to participate in elections, so that we can use this data to locate the measures we can take to increase universal suffrage and voter turnout. Likely, the largest factors that lead people to not vote in elections will be barriers to voting such as waiting in line, taking time off work or missing the voter registration deadline. These factors itself are linked to income group, race, etc which can cause confoundment issues and should be accounted for. My hypothesis from these considerations will be that the largest reason as to why people don’t vote will be at the highest intersection between a particular demographic and access to voting, which seems likely to be that lower income groups are least likely to vote due to inaccessibility in participating in elections. My data is taken from the Why Many Americans Don’t Vote data set done by Ipsos for FiveThirtyEight. The explanatory variables of interest are Questions 5, 8, 11, 16-18, 20-22, 25, 28, 29, which cover political opinions, trust or distrust of social and political institutions, accessibility to vote, whether or not respondents are registered to vote and reasons to or not to vote. These variables are coded 1 to a certain number such as 1-4, or 1-8, that indicates different discrete answers to the questions- thus I can measure the answers that are highest chosen by voters. I will analyse these answers through the categorical variables of respondents including voter_category(consistent, somewhat or never voters), ppage(age of voter), gender(gender of voter), educ(highest education attained), race(race of voter), income_cat(household income category of voter). This categorical data will be used to measure trends among different classifications of respondents. My outcome variable will be the failure to vote in elections. My hypothesis would be proved if there was a positive, significant coefficient when I run my regression between low income groups and reported inaccessibility to voting, as well as a positive, significant coefficient representing the link between this respondent group and a failure to vote. If there is a negative or weak correlation that is not statistically significant, then my hypothesis would be disproved. From analysing multiple variables, I may be led to a new conclusion about the demographic and reasons why most people don’t vote.</p>
-<h2 id="project-milestone-3-data-visualisation">Project Milestone 3 Data Visualisation</h2>
-<p>I have shown the proportion of non-voters by income group with my column graph. I have compared respondents from different income groups against the proportion of each group that indicated they planned not to vote in the 2020 November Presidential election. Thus, I have shown that as income increases, the likelihood a respondent plans not to vote decreases. The highest proportion of those who planned not to vote was 12.8% of respondents who made less than 40,000 a year. The lowest percentage was at 4.5% belonging to respondents who made 125,000 or more per year.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Is undemocratic government linked to weaker economic development of a country? This study aims to investigate the correlation between the concentration of presidential power and a country’s economic performance, as measured by the Gini coefficient. My main hypothesis proposes that there is a positive correlation between greater presidential power and higher Gini coefficients, implying that nations with a more pronounced power imbalance tend to exhibit increased income inequality.</p>
+<p>Throughout history, dictatorships and authoritarian regimes have experienced severe economic hardships. By using presidential power as a lens to examine the illiberalism of a country and the Gini coefficient as a metric for economic development, I seek to examine the intrinsic links between political governance and economic outcomes. My null hypothesis suggests that there is no correlation between greater presidential power and economic development.</p>
+<p>Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries.</p>
+<h2 id="data">Data</h2>
+<ol start="2" type="1">
+<li>a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable;</li>
+</ol>
+<p>For the data section, you should</p>
+<ul>
+<li>note if your research design is cross-sectional (most projects will be of this type) or one of the other designs we discussed (randomized experiment, before-and-after, differences-in-differences). CR4OSS. SECTIONINAL</li>
+<li>Data section: (3pts)
+<ul>
+<li>2-3 paragraphs
+<ul>
+<li>INDEPENDENT- PRES POWER</li>
+<li>DEPENDENDT- INCOME INEQUALITY</li>
+<li>survey</li>
+</ul></li>
+<li>plot visualizing main outcome of interest</li>
+</ul></li>
+</ul>
+<h2 id="results">Results</h2>
+<ol start="3" type="1">
+<li>a results section that contains a scatterplot, barplot, or boxplot of the main relationship of interest and output for the main regression of interest; and</li>
+</ol>
+<ul>
+<li>Results section: (8pts)
+<ul>
+<li>plot of main analysis</li>
+<li>regression output</li>
+<li>2-3 paragraphs of description and interpretation of the plots and regression (including interpreting the main coefficient of interest and describing if it is statistically significant and if we should interpret it causally). This section could be longer if you choose to include additional analyses.</li>
+</ul></li>
+</ul>
+<p>For the results section, you should interpret (in plain English) the main coefficient of interest in your regression. You should also comment on the statistical significance of the estimated coefficient and whether or not you believe the coefficient to represent a causal effect.</p>
+<h2 id="conclusion">Conclusion</h2>
+<ol start="4" type="1">
+<li>a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect).</li>
+</ol>
+<ul>
+<li>Conclusion section: 1 paragraph (2pts)
+<ul>
+<li><ol type="i">
+<li>summarizing results and assessing the extent to which you find support for your hypothesis;</li>
+</ol></li>
+<li><ol start="2" type="i">
+<li>describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money.</li>
+</ol></li>
+</ul></li>
+</ul>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
-<span><span class='va'>nonvoters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"nonvoters_data.csv"</span><span class='op'>)</span></span>
-<span><span class='va'>nonvoters</span></span></code></pre>
+<span><span class='va'>pres_powers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='st'>"PrespowData_FINAL.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>inequality</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='st'>"inequality.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>pres_powers</span></span></code></pre>
 </div>
-<pre><code># A tibble: 5,836 × 119
-   RespId weight    Q1  Q2_1  Q2_2  Q2_3  Q2_4  Q2_5  Q2_6  Q2_7  Q2_8
-    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 470001  0.752     1     1     1     2     4     1     4     2     2
- 2 470002  1.03      1     1     2     2     3     1     1     2     1
- 3 470003  1.08      1     1     1     2     2     1     1     2     1
- 4 470007  0.682     1     1     1     1     3     1     1     1     1
- 5 480008  0.991     1     1     1    -1     1     1     1     1     1
- 6 480009  1.06      1     3     2     3     4     1     3     3     1
- 7 480010  1.15      1     1     1     2     3     1     1     1     1
- 8 470008  1.02      1     1     1     2     2     1     3     1     1
- 9 470010  0.818     1     1     1     1     3     1     1     1     1
-10 470011  1.17      1     1     1     2     1     1     1     1     2
-# ℹ 5,826 more rows
-# ℹ 108 more variables: Q2_9 &lt;dbl&gt;, Q2_10 &lt;dbl&gt;, Q3_1 &lt;dbl&gt;,
-#   Q3_2 &lt;dbl&gt;, Q3_3 &lt;dbl&gt;, Q3_4 &lt;dbl&gt;, Q3_5 &lt;dbl&gt;, Q3_6 &lt;dbl&gt;,
-#   Q4_1 &lt;dbl&gt;, Q4_2 &lt;dbl&gt;, Q4_3 &lt;dbl&gt;, Q4_4 &lt;dbl&gt;, Q4_5 &lt;dbl&gt;,
-#   Q4_6 &lt;dbl&gt;, Q5 &lt;dbl&gt;, Q6 &lt;dbl&gt;, Q7 &lt;dbl&gt;, Q8_1 &lt;dbl&gt;, Q8_2 &lt;dbl&gt;,
-#   Q8_3 &lt;dbl&gt;, Q8_4 &lt;dbl&gt;, Q8_5 &lt;dbl&gt;, Q8_6 &lt;dbl&gt;, Q8_7 &lt;dbl&gt;,
-#   Q8_8 &lt;dbl&gt;, Q8_9 &lt;dbl&gt;, Q9_1 &lt;dbl&gt;, Q9_2 &lt;dbl&gt;, Q9_3 &lt;dbl&gt;, …</code></pre>
+<pre><code>      X            country year                  countryyear iso
+1     0            Albania 1991            Albania 1991-1998   1
+2     1            Albania 1998                 Albania 1998   2
+3     2            Algeria 1996            Algeria 1997-2008   3
+4     3             Angola 1992             Angola 1993-2009   4
+5     4          Argentina 1983          Argentina 1984-1994   5
+6     5          Argentina 1994               Argentina 1994   6
+7     6            Armenia 1991            Armenia 1991-1994   7
+8     7            Armenia 1995            Armenia 1995-2005   8
+9     8            Armenia 2000               Armenia 2006 -   9
+10    9            Austria 1920            Austria 1921-1929  10
+11   10            Austria 1929            Austria 1930-1933  11
+12   11            Austria 1945               Austria 1945 -  12
+13   12         Azerbaijan 1995         Azerbaijan 1996-2002  13
+14   13        Banglasdesh 1986            Bangladesh 1986 -  14
+15   14            Belarus 1994            Belarus 1994-1996  15
+16   15            Belarus 1996               Belarus 1997 -  16
+17   16              Benin 1990                 Benin 1991 -  17
+18   17            Bolivia 1967            Bolivia 1967-1994  18
+19   18            Bolivia 1995            Bolivia 1995-2008  19
+20   19       Bosnia and H 1995          Bosnia and H 1996 -  20
+21   20           Botswana 1996              Botswana 1967 -  21
+22   21             Brazil 1946             Brazil 1946-1953  22
+23   22             Brazil 1954           Brazil 1954 - 1960  23
+24   23             Brazil 1988                Brazil 1988 -  24
+25   24           Bulgaria 1990           Bulgaria 1990-1991  25
+26   25           Bulgaria 1992              Bulgaria 1992 -  26
+27   26       Burkina Faso 1977       Burkina Faso 1978-1980  27
+28   27       Burkina Faso 1991       Burkina Faso 1991-2011  28
+29   28            Burundi 1992          Burundi 1992 - 1996  29
+30   29           Cameroon 1996              Cameroon 1996 -  30
+31   30         Cape Verde 1992            Cape Verde 1993 -  31
+32   31                CAR 1995                CAR 1995-2002  32
+33   32                CAR 2005                   CAR 2005 -  33
+34   33              Chile 1891              Chile 1891-1925  34
+35   34              Chile 1925              Chile 1925-1969  35
+36   35              Chile 1969              Chile 1969-1973  36
+37   36              Chile 1989                 Chile 1989 -  37
+38   37              China 1983              China 1983-2004  38
+39   38           Colombia 1960         Colombia 1960 - 1990  39
+40   39           Colombia 1991              Colombia 1991 -  40
+41   40            Comoros 1992            Comoros 1992-1996  41
+42   41            Comoros 1996            Comoros 1997-1998  42
+43   42            Comoros 2000               Comoros 2002 -  43
+44   43  Congo Brazzaville 1992  Congo Brazzaville 1992-1997  44
+45   44  Congo Brazzaville 2001     Congo Brazzaville 2002 -  45
+46   45              Zaire 1996              Zaire 1997-2002  46
+47   46                DRC 2005                   DRC 2006 -  47
+48   47         Costa Rica 1949            Costa Rica 1949 -  48
+49   48      Cote d&#39;Ivoire 1960      Cote d&#39;Ivoire 1961-1999  49
+50   49            Croatia 1990            Croatia 1991-2000  50
+51   50            Croatia 2001               Croatia 2001 -  51
+52   51               Cuba 1940               Cuba 1941-1958  52
+53   52             Cyprus 1960                Cyprus 1960 -  53
+54   53     Czechoslovakia 1920     Czechoslovakia 1920-1934  54
+55   54     Czechoslovakia 1935     Czechoslovakia 1935-1944  55
+56   55     Czechoslovakia 1990          Czechoslovakia 1991  56
+57   56          Czech Rep 1992          Czech Rep 1993-2000  57
+58   57          Czech Rep 2000          Czech Rep 2001-2011  58
+59   58           Djibouti 1992           Djibouti 1993-2009  59
+60   59           Dominica 1979              Dominica 1979 -  60
+61   60 Dominican Republic 1966 Dominican Republic 1967-1994  61
+62   61 Dominican Republic 1994 Dominican Republic 1995-2002  62
+63   62            Ecuador 1979            Ecuador 1984-1998  63
+64   63            Ecuador 1999            Ecuador 1999-2008  64
+65   64              Egypt 1971              Egypt 1980-2000  65
+66   65        El Salvador 1983        El Salvador 1984-2000  66
+67   66        El Salvador 2000           El Salvador 2001 -  67
+68   67            Estonia 1992               Estonia 1992 -  68
+69   68            Finland 1919          Finland 1919 - 1956  69
+70   69            Finland 1956          Finland 1957 - 1994  70
+71   70            Finland 1994            Finland 1995-1999  71
+72   71            Finland 2000            Finland 2000-2011  72
+73   72             France 1875             France 1875-1940  73
+74   73             France 1918                  France 1918  74
+75   74             France 1946             France 1947-1958  75
+76   75             France 1962             France 1963-2008  76
+77   76              Gabon 1991              Gabon 1997-2010  77
+78   77             Gambia 2001                Gambia 1997 -  78
+79   78            Georgia 1994            Georgia 1990-1995  79
+80   79            Georgia 1995            Georgia 1996-2003  80
+81   80            Georgia 2004               Georgia 2004 -  81
+82   81            Germany 1925            Germany 1920-1932  82
+83   82            Germany 1946               Germany 1946 -  83
+84   83              Ghana 1996                 Ghana 1992 -  84
+85   84             Greece 1975             Greece 1975-1985  85
+86   85             Greece 1986                Greece 1986 -  86
+87   86          Guatemala 1985             Guatemala 1985 -  87
+88   87             Guinea 1990             Guinea 1992-2009  88
+89   88      Guinea-Bissau 1994         Guinea-Bissau 1980 -  89
+90   89             Guyana 1992                Guyana 1992 -  90
+91   90              Haiti 1987                 Haiti 1987 -  91
+92   91           Honduras 1982              Honduras 1982 -  92
+93   92            Hungary 1990            Hungary 1991-2011  93
+94   93            Iceland 1944               Iceland 1944 -  94
+95   94              India 1950                 India 1950 -  95
+96   95          Indonesia 1945          Indonesia 1960-2002  96
+97   96               Iran 1979                  Iran 1990 -  97
+98   97            Ireland 1937               Ireland 1938 -  98
+99   98             Israel 1964                Israel 1964 -  99
+100  99              Italy 1948                 Italy 1948 - 100
+101 100         Kazakhstan 1990         Kazakhstan 1990-1992 101
+102 101         Kazakhstan 1993         Kazakhstan 1993-1995 102
+103 102         Kazakhstan 1995            Kazakhstan 1996 - 103
+104 103              Kenya 1997              Kenya 1998-2007 104
+105 104            Kirbati 1979              Kiribati 1980 - 105
+106 105        South Korea 1948        South Korea 1949-1959 106
+107 106        South Korea 1962        South Korea 1962-1972 107
+108 107        South Korea 1987           South Korea 1988 - 108
+109 108         Kyrgyzstan 1990         Kyrgyzstan 1990-1992 109
+110 109         Kyrgyzstan 1993         Kyrgyzstan 1993-1995 110
+111 110         Kyrgyzstan 1995         Kyrgyzstan 1996-2002 111
+112 111         Kyrgyzstan 2003         Kyrgyzstan 2003-2007 112
+113 112             Latvia 1922             Latvia 1922-1933 113
+114 113             Latvia 1990             Latvia 1992-1997 114
+115 114             Latvia 1998                Latvia 1998 - 115
+116 115          Lithuania 1920          Lithuania 1923-1933 116
+117 116          Lithuania 1992             Lithuania 1993 - 117
+118 117          Macedonia 1991             Macedonia 1992 - 118
+119 118         Madagascar 1992         Madagascar 1993-1997 119
+120 119         Madagascar 1998         Madagascar 1998-2008 120
+121 120             Malawi 1994                Malawi 1994 - 121
+122 121               Mali 1992               Mali 1992-2012 122
+123 122              Malta 1964                 Malta 1965 - 123
+124 123   Marshall Islands 1986      Marshall Islands 1979 - 124
+125 124         Mauritania 2005         Mauritania 2006-2008 125
+126 125          Mauritius 1992             Mauritius 1992 - 126
+127 126             Mexico 1917                Mexico 1929 - 127
+128 127        Microsnesia 1979            Micronesia 1979 - 128
+129 128            Moldova 1990                 Moldova 1990 129
+130 129            Moldova 1991            Moldova 1991-1994 130
+131 130            Moldova 1994            Moldova 1995-2000 131
+132 131            Moldova 2000               Moldova 2001 - 132
+133 132           Mongolia 1992              Mongolia 1992 - 133
+134 133         Montenegro 2007            Montenegro 2008 - 134
+135 134         Mozambique 1986       Mozambique 1987 - 1990 135
+136 135         Mozambique 1990         Mozambique 1991-2004 136
+137 136         Mozambique 2004            Mozambique 2005 - 137
+138 137            Namibia 1990               Namibia 1990 - 138
+139 138              Nauru 1968                 Nauru 1968 - 139
+140 139          Nicaragua 1987             Nicaragua 1987 - 140
+141 140              Niger 1992              Niger 1993-1995 141
+142 141              Niger 1999              Niger 2000-2009 142
+143 142            Nigeria 1963            Nigeria 1964-1965 143
+144 143            Nigeria 1980            Nigeria 1980-1983 144
+145 144            Nigeria 1989            Nigeria 1989-1993 145
+146 145            Nigeria 1999               Nigeria 1999 - 146
+147 146           Pakistan 1985           Pakistan 1986-1997 147
+148 147           Pakistan 1997           Pakistan 1998-1999 148
+149 148              Palau 1994                 Palau 1995 - 149
+150 149             Panama 1972                  Panama 1972 150
+151 150           Paraguay 1967           Paraguay 1968-1991 151
+152 151           Paraguay 1992              Paraguay 1992 - 152
+153 152               Peru 1979               Peru 1980-1992 153
+154 153               Peru 1993                  Peru 1994 - 154
+155 154        Philippines 1946        Philippines 1946-1972 155
+156 155        Philippines 1985           Philippines 1987 - 156
+157 156             Poland 1921             Poland 1921-1926 157
+158 157             Poland 1990             Poland 1990-1992 158
+159 158             Poland 1992             Poland 1993-1996 159
+160 159             Poland 1997                Poland 1997 - 160
+161 160           Portugal 1911           Portugal 1912-1932 161
+162 161           Portugal 1919           Portugal 1919-1926 162
+163 162           Portugal 1976         Portugal 1976 - 1982 163
+164 163           Portugal 1982              Portugal 1983 - 164
+165 164            Romania 1992               Romania 1992 - 165
+166 165             Russia 1990             Russia 1990-1991 166
+167 166             Russia 1991             Russia 1992-1993 167
+168 167             Russia 1993                Russia 1994 - 168
+169 168                STP 1990                STP 1991-2002 169
+170 169                STP 2003                   STP 2003 - 170
+171 170            Senegal 1998            Senegal 1992-2000 171
+172 171            Senegal 2001               Senegal 2001 - 172
+173 172             Serbia 2007                Serbia 2007 - 173
+174 173         Seychelles 1993            Seychelles 1993 - 174
+175 174       Sierra Leone 1991          Sierra Leone 1992 - 175
+176 175          Singapore 1995             Singapore 1995 - 176
+177 176           Slovakia 1992           Slovakia 1993-1998 177
+178 177           Slovakia 1999           Slovakia 1999-2001 178
+179 178           Slovakia 2001              Slovakia 2002 - 179
+180 179           Slovenia 1992              Slovenia 1992 - 180
+181 180       South Africa 1961       South Africa 1961-1983 181
+182 181       South Africa 1983       South Africa 1984-1993 182
+183 182       South Africa 1985            South Africa 1995 183
+184 183       South Africa 1996          South Africa 1996 - 184
+185 184              Spain 1931              Spain 1932-1936 185
+186 185          Sri Lanka 1979             Sri Lanka 1979 - 186
+187 186           Suriname 1975           Suriname 1975-1979 187
+188 187           Suriname 1991              Suriname 1992 - 188
+189 188        Switzerland 1874           Switzerland 1874 - 189
+190 189              Syria 1973              Syria 1973-2011 190
+191 190             Taiwan 1995                Taiwan 1995 - 191
+192 191         Tajikistan 1994            Tajikistan 1995 - 192
+193 192           Tanzania 1998              Tanzania 1995 - 193
+194 193        Timor Leste 2002           Timor Leste 2002 - 194
+195 194               Togo 2002                  Togo 2003 - 195
+196 195  Trinidad &amp; Tobago 1976     Trinidad &amp; Tobago 1976 - 196
+197 196            Tunisia 1959          Tunisia 1998 - 2010 197
+198 197       Turkmenistan 1992     Turkmenistan 1992 - 2008 198
+199 198             Turkey 1961             Turkey 1962-1970 199
+200 199             Turkey 1973             Turkey 1974-1980 200
+201 200             Turkey 1983             Turkey 1983-2007 201
+202 201             Turkey 2007                Turkey 2008 - 202
+203 202             Uganda 1995                Uganda 1996 - 203
+204 203            Ukraine 1992            Ukraine 1992-1995 204
+205 204            Ukraine 1996            Ukraine 1996-2004 205
+206 205            Ukraine 2006            Ukraine 2005-2010 206
+207 206            Ukraine 2011               Ukraine 2011 - 207
+208 207                 US 1788                    US 1788 - 208
+209 208            Uruguay 1919            Uruguay 1919-1933 209
+210 209            Uruguay 1942            Uruguay 1943-1966 210
+211 210            Uruguay 1966            Uruguay 1967-1972 211
+212 211            Uruguay 1985               Uruguay 1985 - 212
+213 212         Uzbekistan 1992            Uzbekistan 1993 - 213
+214 213            Vanuatu 1980               Vanuatu 1981 - 214
+215 214          Venezuela 1960        Venezuela 1961 - 1999 215
+216 215          Venezuela 2001             Venezuela 2001 - 216
+217 216              Yemen 2000              Yemen 2001-2010 217
+218 217         Yugoslavia 1992         Yugoslavia 1992-2000 218
+219 218             Zambia 1996                Zambia 1996 - 219
+220 219           Zimbabwe 2000           Zimbabwe 1991-2008 220
+221 220             Zambia 1992             Zambia 1992-1995 221
+222 221              Ghana 1980              Ghana 1980-1991 222
+223 222  Congo Brazzaville 1961  Congo Brazzaville 1961-1963 223
+224 223         Cape Verde 1991         Cape Verde 1991-1992 224
+225 224                CAR 1992                CAR 1992-1993 225
+    regioncode    prespow1    prespow2 raw_prespow1  raw_prespow2
+1       Europe 0.181755700 0.215453650   0.21464913 -1.805144e-01
+2       Europe 0.141148160 0.185390030   0.17567400 -2.032237e-01
+3       Africa 0.483746600 0.813308600   0.50450000  2.710900e-01
+4       Africa 0.408020440 0.509000200   0.43181800  4.122316e-02
+5     Americas 0.288713780 0.363463500   0.31730750 -6.871155e-02
+6     Americas 0.407007900 0.523247540   0.43084618  5.198527e-02
+7         Asia 0.412252300 0.667666440   0.43587977  1.610756e-01
+8         Asia 0.402563570 0.569723100   0.42658052  8.709175e-02
+9         Asia 0.650225040 0.480438770   0.66428600  1.964861e-02
+10      Europe          NA          NA           NA            NA
+11      Europe          NA          NA           NA            NA
+12      Europe 0.091508776 0.345814900   0.12803012 -8.204284e-02
+13        Asia 0.698600950 0.881948350   0.71071720  3.229387e-01
+14        Asia 0.107001470 0.179898350   0.14290000 -2.073720e-01
+15      Europe 0.545317050 0.745285750   0.56359530  2.197073e-01
+16      Europe 0.615426700 1.000000000   0.63088655  4.121120e-01
+17      Africa 0.631937200 0.725348950   0.64673334  2.046476e-01
+18    Americas 0.288713780 0.363463500   0.31730750 -6.871155e-02
+19    Americas 0.319165740 0.346237450   0.34653527 -8.172366e-02
+20      Europe 0.283704940 0.375410140   0.31250000 -5.968736e-02
+21      Africa 0.739529100 0.542533460   0.75000000  6.655337e-02
+22    Americas 0.453011040 0.571752400   0.47500000  8.862460e-02
+23    Americas 0.381882700 0.463337630   0.40673100  6.730836e-03
+24    Americas 0.486268820 0.693433640   0.50692080  1.805395e-01
+25      Europe 0.018498123 0.119373910   0.05795450 -2.530906e-01
+26      Europe 0.183131770 0.292827040   0.21596988 -1.220685e-01
+27      Africa 0.166493030 0.471689130   0.20000000  1.303935e-02
+28      Africa 0.348822680 0.164934430   0.37500000 -2.186754e-01
+29      Africa 0.557199400 0.428533900   0.57500000 -1.955902e-02
+30      Africa 0.348822680 0.164934430   0.37500000 -2.186754e-01
+31      Africa 0.281337000 0.369707600   0.31022725 -6.399489e-02
+32      Africa 0.387893320 0.426794440   0.41250000 -2.087295e-02
+33      Africa 0.459522800 0.331077750   0.48125000 -9.317491e-02
+34    Americas 0.374869760 0.508669140   0.40000000  4.097309e-02
+35    Americas 0.479058150 0.592780200   0.50000000  1.045084e-01
+36    Americas 0.523137600 0.644302850   0.54230750  1.434274e-01
+37    Americas 0.570156300 0.842880960   0.58743600  2.934282e-01
+38        Asia 0.000000000 0.000000000   0.04020000 -3.432626e-01
+39    Americas 0.416277900 0.509892100   0.43974352  4.189690e-02
+40    Americas 0.380618040 0.475365200   0.40551720  1.581615e-02
+41      Africa          NA          NA           NA            NA
+42      Africa 0.322775570 0.454427030   0.35000000  3.855186e-10
+43      Africa 1.000000000 0.794266160   1.00000000  2.567059e-01
+44      Africa 0.209904850 0.449129430   0.24166667 -4.001663e-03
+45      Africa 1.000000000 0.794266160   1.00000000  2.567059e-01
+46      Africa 0.275057300 0.462445560   0.30420000  6.056998e-03
+47      Africa          NA          NA           NA            NA
+48    Americas 0.283624700 0.297023030   0.31242300 -1.188990e-01
+49      Africa 0.353511150 0.594347660   0.37950000  1.056925e-01
+50      Europe 0.335046140 0.562767270   0.36177728  8.183744e-02
+51      Europe 0.290501150 0.372164600   0.31902300 -6.213895e-02
+52    Americas 0.296728460 0.445585820   0.32500000 -6.678439e-03
+53      Europe 0.648364250 0.696722900   0.66250000  1.830241e-01
+54      Europe          NA          NA           NA            NA
+55      Europe          NA          NA           NA            NA
+56      Europe          NA          NA           NA            NA
+57      Europe 0.142226200 0.179889810   0.17670871 -2.073784e-01
+58      Europe 0.256778480 0.269898620   0.28665600 -1.393881e-01
+59      Africa 1.000000000 0.794266160   1.00000000  2.567059e-01
+60    Americas          NA          NA           NA            NA
+61    Americas 0.322775570 0.466613560   0.35000000  9.205404e-03
+62    Americas 0.399958670 0.524839400   0.42408034  5.318771e-02
+63    Americas 0.362736670 0.528949700   0.38835466  5.629253e-02
+64    Americas 0.559920550 0.835780740   0.57761174  2.880649e-01
+65      Africa 0.508543430 0.854998770   0.52830000  3.025817e-01
+66    Americas 0.312805530 0.366647150   0.34043074 -6.630668e-02
+67    Americas 0.373266820 0.476398920   0.39846150  1.659699e-02
+68      Europe 0.184152330 0.174104140   0.21694940 -2.117488e-01
+69      Europe          NA          NA           NA            NA
+70      Europe 0.157021250 0.462113230   0.19090900  5.805962e-03
+71      Europe 0.162388620 0.552905560   0.19606060  7.438819e-02
+72      Europe 0.049873147 0.269023950   0.08806825 -1.400488e-01
+73      Europe          NA          NA           NA            NA
+74      Europe          NA          NA           NA            NA
+75      Europe          NA          NA           NA            NA
+76      Europe 0.130635840 0.464954000   0.16558428  7.951796e-03
+77      Africa 0.410085400 0.455425320   0.43379998  7.540882e-04
+78      Africa 0.609293600 0.416667130   0.62500000 -2.852287e-02
+79      Europe 0.166493030 0.317271770   0.20000000 -1.036036e-01
+80      Europe 0.587615850 0.787031050   0.60419370  2.512406e-01
+81      Europe 0.557199400 0.365682540   0.57500000 -6.703534e-02
+82      Europe 0.374869760 0.508669140   0.40000000  4.097309e-02
+83      Europe 0.029153991 0.132549210   0.06818200 -2.431383e-01
+84      Africa 0.435646330 0.372024570   0.45833334 -6.224473e-02
+85      Europe          NA          NA           NA            NA
+86      Europe 0.029153991 0.132549210   0.06818200 -2.431383e-01
+87    Americas 0.283087300 0.278929300   0.31190720 -1.325665e-01
+88      Africa 0.583715300 0.607702140   0.60045000  1.157801e-01
+89      Africa 0.281337260 0.454175260   0.31022750 -1.901750e-04
+90    Americas          NA          NA           NA            NA
+91    Americas 0.066333264 0.258128200   0.10386667 -1.482792e-01
+92    Americas 0.342595340 0.391834020   0.36902300 -4.728116e-02
+93      Europe 0.275452170 0.379823330   0.30457900 -5.635375e-02
+94      Europe 0.325301530 0.846018000   0.35242440  2.957979e-01
+95        Asia 0.060429256 0.101597890   0.09820000 -2.665182e-01
+96        Asia 0.030214632 0.050798964   0.06920000 -3.048904e-01
+97        Asia 0.123046465 0.206874330   0.15830000 -1.869950e-01
+98      Europe 0.062304650 0.292673260   0.10000000 -1.221847e-01
+99        Asia 0.004584288 0.007707438   0.04460000 -3.374406e-01
+100     Europe 0.100191705 0.403288960   0.13636400 -3.862839e-02
+101       Asia 0.499895780 0.737992200   0.52000000  2.141979e-01
+102       Asia 0.426963930 0.891545300   0.45000000  3.301880e-01
+103       Asia 0.660552440 0.753569840   0.67419820  2.259649e-01
+104     Africa 0.615510170 0.563512500   0.63096666  8.240040e-02
+105    Oceania          NA          NA           NA            NA
+106       Asia 0.218587200 0.382502530   0.25000000 -5.432995e-02
+107       Asia 0.426963930 0.550724600   0.45000000  7.274076e-02
+108       Asia 0.348822680 0.487641330   0.37500000  2.508925e-02
+109       Asia 0.244634300 0.494899200   0.27500000  3.057165e-02
+110       Asia 0.458714600 0.670005900   0.48047426  1.628428e-01
+111       Asia 0.484275370 0.735905770   0.50500750  2.126219e-01
+112       Asia 0.656929100 0.634334740   0.67072050  1.358977e-01
+113     Europe          NA          NA           NA            NA
+114     Europe 0.133004160 0.081221360   0.16785740 -2.819101e-01
+115     Europe 0.010210463 0.067458760   0.05000000 -2.923060e-01
+116     Europe          NA          NA           NA            NA
+117     Europe 0.281889230 0.380331550   0.31075728 -5.596986e-02
+118     Europe 0.115616020 0.155649720   0.15116826 -2.256888e-01
+119     Africa 0.101375290 0.403193270   0.13750000 -3.870069e-02
+120     Africa 0.407428650 0.336831780   0.43125000 -8.882846e-02
+121     Africa 0.590227100 0.573505300   0.60670000  8.994868e-02
+122     Africa 0.338591370 0.398366930   0.36518000 -4.234638e-02
+123     Europe 0.147549480 0.583779450   0.18181800  9.770955e-02
+124    Oceania          NA          NA           NA            NA
+125     Africa 0.446499260 0.332516250   0.46875000 -9.208830e-02
+126     Africa 0.176703480 0.109594606   0.20980000 -2.604777e-01
+127   Americas 0.343404900 0.332002300   0.36980000 -9.247652e-02
+128    Oceania          NA          NA           NA            NA
+129     Europe 0.229198800 0.244277490   0.26018500 -1.587416e-01
+130     Europe 0.287563530 0.376302800   0.31620347 -5.901306e-02
+131     Europe 0.239521770 0.340659680   0.27009300 -8.593697e-02
+132     Europe 0.271729170 0.154264200   0.30100566 -2.267354e-01
+133       Asia 0.293435100 0.314088400   0.32183900 -1.060082e-01
+134     Europe          NA          NA           NA            NA
+135     Africa 0.289624900 0.460705370   0.31818200  4.742489e-03
+136     Africa 0.354742650 0.470616220   0.38068200  1.222890e-02
+137     Africa 0.469191850 0.473174240   0.49053034  1.416117e-02
+138     Africa 0.384941300 0.440572600   0.40966666 -1.046529e-02
+139    Oceania          NA          NA           NA            NA
+140   Americas 0.402542470 0.528337200   0.42656025  5.582987e-02
+141     Africa 0.453011040 0.566930830   0.47500000  8.498250e-02
+142     Africa 0.342310900 0.344024330   0.36875000 -8.339540e-02
+143     Africa          NA          NA           NA            NA
+144     Africa          NA          NA           NA            NA
+145     Africa 0.283704940 0.450337170   0.31250000 -3.089387e-03
+146     Africa 0.644023000 0.562391940   0.65833330  8.155394e-02
+147       Asia          NA          NA           NA            NA
+148       Asia 0.316315920 0.531812400   0.34380000  5.845496e-02
+149    Oceania          NA          NA           NA            NA
+150   Americas 0.451684700 0.635784300   0.47372700  1.369927e-01
+151   Americas 0.531152300 0.634835700   0.55000000  1.362761e-01
+152   Americas 0.271973070 0.245110590   0.30123976 -1.581123e-01
+153   Americas 0.203560100 0.277106000   0.23557699 -1.339438e-01
+154   Americas 0.419749980 0.532615300   0.44307600  5.906142e-02
+155       Asia          NA          NA           NA            NA
+156       Asia 0.275630330 0.402614920   0.30475000 -3.913755e-02
+157     Europe          NA          NA           NA            NA
+158     Europe 0.140445920 0.324985800   0.17500000 -9.777662e-02
+159     Europe 0.294733730 0.506786600   0.32308543  3.955106e-02
+160     Europe 0.240696500 0.443477420   0.27122050 -8.271059e-03
+161     Europe          NA          NA           NA            NA
+162     Europe          NA          NA           NA            NA
+163     Europe 0.264169600 0.599596560   0.29375000  1.096574e-01
+164     Europe 0.196881350 0.543420260   0.22916672  6.722324e-02
+165     Europe 0.250204950 0.462717120   0.28034672  6.262120e-03
+166     Europe 0.114398840 0.124226620   0.15000000 -2.494250e-01
+167     Europe 0.268751830 0.414638100   0.29814800 -3.005555e-02
+168     Europe 0.561467230 0.783775300   0.57909626  2.487813e-01
+169     Africa 0.281337260 0.454175260   0.31022750 -1.901750e-04
+170     Africa 0.206747760 0.444002270   0.23863650 -7.874606e-03
+171     Africa 0.387893350 0.561361250   0.41250002  8.077539e-02
+172     Africa 0.565881800 0.418922900   0.58333330 -2.681892e-02
+173     Europe          NA          NA           NA            NA
+174     Africa 0.609293600 0.416667130   0.62500000 -2.852287e-02
+175     Africa 0.547266800 0.605948100   0.56546664  1.144552e-01
+176       Asia 0.176390920 0.296560760   0.20950000 -1.192482e-01
+177     Europe 0.173463480 0.203443260   0.20669025 -1.895868e-01
+178     Europe 0.043361116 0.195747840   0.08181800 -1.953997e-01
+179     Europe 0.189382850 0.313582870   0.22196966 -1.063901e-01
+180     Europe 0.118016884 0.169424620   0.15347260 -2.152836e-01
+181     Africa          NA          NA           NA            NA
+182     Africa          NA          NA           NA            NA
+183     Africa          NA          NA           NA            NA
+184     Africa 0.382527620 0.339272230   0.40735000 -8.698501e-02
+185     Europe          NA          NA           NA            NA
+186       Asia 0.285580340 0.414563100   0.31430000 -3.011221e-02
+187   Americas          NA          NA           NA            NA
+188   Americas          NA          NA           NA            NA
+189     Europe          NA          NA           NA            NA
+190       Asia 0.585434500 0.984273400   0.60210000  4.002325e-01
+191       Asia 0.270681400 0.385345760   0.30000000 -5.218225e-02
+192       Asia 0.498007540 0.594409170   0.51818764  1.057389e-01
+193     Africa 0.446499260 0.257301800   0.46875000 -1.489034e-01
+194       Asia 0.159389470 0.407580900   0.19318200 -3.538637e-02
+195     Africa 0.413940400 0.227867600   0.43750000 -1.711372e-01
+196   Americas 0.062721400 0.105451606   0.10040000 -2.636072e-01
+197     Africa 0.353511150 0.594347660   0.37950000  1.056925e-01
+198       Asia 0.661824170 0.848117050   0.67541885  2.973834e-01
+199       Asia          NA          NA           NA            NA
+200       Asia          NA          NA           NA            NA
+201       Asia 0.267844900 0.605565900   0.29727750  1.141665e-01
+202       Asia 0.147549480 0.618723300   0.18181800  1.241052e-01
+203     Africa 0.511634400 0.435876850   0.53126670 -1.401235e-02
+204     Europe 0.395321760 0.522785250   0.41962980  5.163605e-02
+205     Europe 0.440204440 0.672823100   0.46270823  1.649708e-01
+206     Europe 0.329287350 0.350025900   0.35625000 -7.886198e-02
+207     Europe 0.464422050 0.709040460   0.48595230  1.923285e-01
+208   Americas 0.288914350 0.343785940   0.31750000 -8.357548e-02
+209   Americas          NA          NA           NA            NA
+210   Americas          NA          NA           NA            NA
+211   Americas          NA          NA           NA            NA
+212   Americas 0.377119720 0.406003360   0.40215950 -3.657801e-02
+213       Asia 0.644775600 0.822506900   0.65905565  2.780382e-01
+214    Oceania          NA          NA           NA            NA
+215   Americas 0.257015440 0.246681750   0.28688340 -1.569255e-01
+216   Americas 0.390899150 0.490077000   0.41538500  2.692907e-02
+217       Asia          NA          NA           NA            NA
+218     Europe 0.202958940 0.087013670   0.23499998 -2.775347e-01
+219     Africa 0.609762500 0.609918100   0.62545000  1.174540e-01
+220     Africa 0.741612800 0.681510000   0.75200000  1.715327e-01
+221     Africa 0.322775570 0.487211380   0.35000000  2.476446e-02
+222     Africa 0.426963930 0.623032200   0.45000000  1.273601e-01
+223     Africa 0.166493030 0.283480100   0.20000000 -1.291290e-01
+224     Africa 0.192540110 0.317435300   0.22500000 -1.034801e-01
+225     Africa 0.270681400 0.419300970   0.30000000 -2.653334e-02
+    se_prespow1   lb_prespow1 ub_prespow1  se_prespow2  lb_prespow2
+1   0.036936890  0.1273072400   0.3019910 0.0377265850 -0.269723600
+2   0.027841331  0.0558824200   0.2954656 0.1164142000 -0.704113540
+3   0.000000000            NA          NA 0.0000000000           NA
+4   0.000000000            NA          NA 0.0000000000           NA
+5   0.032692518 -0.0980903060   0.7327053 0.0779169400 -1.058740100
+6   0.049122524  0.2944602000   0.5672322 0.0468201340 -0.078008230
+7   0.042534100  0.3005173200   0.5712423 0.0211295500  0.093831940
+8   0.060407396  0.2712983500   0.5818626 0.0456082340 -0.030147897
+9   0.000000000            NA          NA 0.0000000000           NA
+10           NA            NA          NA           NA           NA
+11           NA            NA          NA           NA           NA
+12  0.011864828  0.0999742400   0.1560860 0.0206209310 -0.130803560
+13  0.069904700  0.4882492400   0.9331852 0.0561944500  0.144102890
+14  0.000000000            NA          NA 0.0000000000           NA
+15  0.067258246  0.3990202800   0.7281703 0.0547905230  0.085639715
+16  0.094304420  0.3690555400   0.8927177 0.0587253600  0.249064250
+17  0.179454790 -0.1253983100   1.4188650 0.0299579560  0.075748920
+18  0.032692518 -0.0980903060   0.7327053 0.0779169400 -1.058740100
+19  0.052634000  0.1790304200   0.5140402 0.0192160000 -0.142877600
+20  0.187499970 -2.0699130000   2.6949130 0.0870857200 -1.166216400
+21  0.000000000            NA          NA 0.0000000000           NA
+22  0.000000000            NA          NA 0.0000000000           NA
+23  0.068268970 -0.4607084700   1.2741705 0.0818937900 -1.033828400
+24  0.043761235  0.3944289700   0.6194127 0.0447083700  0.065612970
+25  0.032954500 -0.3607721000   0.4766811 0.0781213000 -1.245715900
+26  0.044192426  0.1217759800   0.3101638 0.0359086250 -0.198605920
+27  0.000000000            NA          NA 0.0000000000           NA
+28  0.000000000            NA          NA 0.0000000000           NA
+29  0.000000000            NA          NA 0.0000000000           NA
+30  0.000000000            NA          NA 0.0000000000           NA
+31  0.066003750  0.1001738100   0.5202806 0.0312419500 -0.163420720
+32  0.112499980 -1.0169477000   1.8419478 0.0056603900 -0.092795074
+33  0.043749970 -0.0746460700   1.0371461 0.0779623400 -1.083780400
+34  0.000000000            NA          NA 0.0000000000           NA
+35  0.000000000            NA          NA 0.0000000000           NA
+36  0.057692490 -0.1907450700   1.2753601 0.0246164370 -0.169354100
+37  0.057637244  0.4274093500   0.7474626 0.0690801000  0.101631100
+38  0.000000000            NA          NA 0.0000000000           NA
+39  0.060256530 -0.3258882800   1.2053753 0.0626115500 -0.753658240
+40  0.062294036  0.2325612300   0.5784731 0.0739505200 -0.189503480
+41           NA            NA          NA           NA           NA
+42  0.000000000            NA          NA 0.0000000000           NA
+43  0.000000000            NA          NA 0.0000000000           NA
+44  0.068211280 -0.0518227440   0.5351561 0.0669281200 -0.291970130
+45  0.000000000            NA          NA 0.0000000000           NA
+46  0.000000000            NA          NA 0.0000000000           NA
+47           NA            NA          NA           NA           NA
+48  0.032279210  0.2228015500   0.4020444 0.0413354150 -0.233664510
+49  0.000000000            NA          NA 0.0000000000           NA
+50  0.050049827  0.2502593400   0.4732953 0.0252151230  0.025654607
+51  0.073927800  0.0009373637   0.6371086 0.0177699760 -0.138596940
+52  0.000000000            NA          NA 0.0000000000           NA
+53  0.337500000 -3.6258442000   4.9508443 0.1839085800 -2.153756000
+54           NA            NA          NA           NA           NA
+55           NA            NA          NA           NA           NA
+56           NA            NA          NA           NA           NA
+57  0.036377230  0.0876968300   0.2657206 0.0389943300 -0.302794100
+58  0.103308950 -0.0421191860   0.6154312 0.0874875500 -0.417812530
+59  0.000000000            NA          NA 0.0000000000           NA
+60           NA            NA          NA           NA           NA
+61  0.000000000            NA          NA 0.0000000000           NA
+62  0.072273860  0.1131109740   0.7350496 0.0325664240 -0.086934310
+63  0.058121677  0.1382773000   0.6384321 0.0432293340 -0.129708300
+64  0.050475200  0.4169770800   0.7382463 0.0642541500  0.083579520
+65  0.000000000            NA          NA 0.0000000000           NA
+66  0.063083950  0.1396694200   0.5411920 0.0427986500 -0.202511100
+67  0.021538472  0.1247892600   0.6721337 0.0407145730 -0.500730700
+68  0.031743040  0.1451416600   0.2887572 0.0401569100 -0.302590040
+69           NA            NA          NA           NA           NA
+70  0.009090989  0.0753970300   0.3064210 0.0919035900 -1.161939900
+71  0.027029052  0.1210159200   0.2711053 0.0698381700 -0.119513650
+72  0.035029600 -0.0234116200   0.1995480 0.0793870500 -0.392693820
+73           NA            NA          NA           NA           NA
+74           NA            NA          NA           NA           NA
+75           NA            NA          NA           NA           NA
+76  0.019970357  0.1167186000   0.2144500 0.0510970540 -0.117078190
+77  0.003700007  0.3867869700   0.4808131 0.1718913000 -2.183332000
+78  0.000000000            NA          NA 0.0000000000           NA
+79  0.000000000  0.2000000000   0.2000000 0.0447328460 -0.671988300
+80  0.071328360  0.4296595000   0.7787279 0.0418456940  0.148847880
+81  0.000000000            NA          NA 0.0000000000           NA
+82  0.000000000            NA          NA 0.0000000000           NA
+83  0.000000000            NA          NA 0.0000000000           NA
+84  0.090810390  0.0676077500   0.8490589 0.0580136550 -0.311857300
+85           NA            NA          NA           NA           NA
+86  0.000000000            NA          NA 0.0000000000           NA
+87  0.060577005  0.1437184700   0.4800959 0.0561341160 -0.288419780
+88  0.212050000 -2.0939010000   3.2948008 0.0016886417  0.094323870
+89  0.014772521  0.1225248200   0.4979302 0.0023634336 -0.030220473
+90           NA            NA          NA           NA           NA
+91  0.069808920 -0.1964968400   0.4042302 0.0648891400 -0.972773900
+92  0.010103950  0.3368677200   0.4011783 0.0699227000 -0.269806440
+93  0.045288800  0.2001428500   0.4090151 0.0580237660 -0.190156740
+94  0.078890350  0.1333896500   0.5714591 0.0955759400  0.030436547
+95  0.000000000            NA          NA 0.0000000000           NA
+96  0.000000000            NA          NA 0.0000000000           NA
+97  0.000000000            NA          NA 0.0000000000           NA
+98  0.047997065 -0.0332612170   0.2332612 0.0509945150 -0.263768170
+99  0.000000000            NA          NA 0.0000000000           NA
+100 0.000000000            NA          NA 0.0000000000           NA
+101 0.220000010 -2.2753650000   3.3153650 0.1174451300 -1.278084000
+102 0.000000000            NA          NA 0.0000000000           NA
+103 0.080262450  0.4187672700   0.9296292 0.0145826500  0.179556400
+104 0.119033344  0.1188075540   1.1431259 0.0206873850 -0.006610229
+105          NA            NA          NA           NA           NA
+106 0.000000000            NA          NA 0.0000000000           NA
+107 0.000000000            NA          NA 0.0000000000           NA
+108 0.000000000            NA          NA 0.0000000000           NA
+109 0.000000000  0.2750000000   0.2750000 0.0272753000 -0.315993960
+110 0.089445700  0.1958181600   0.7651305 0.0431492500  0.025522629
+111 0.055303640  0.3628449700   0.6471700 0.0341271500  0.124895275
+112 0.018934480  0.4301351000   0.9113059 0.1283847800 -1.495385600
+113          NA            NA          NA           NA           NA
+114 0.025052164  0.1111854700   0.2245293 0.0214842930 -0.330510940
+115 0.000000000            NA          NA 0.0000000000           NA
+116          NA            NA          NA           NA           NA
+117 0.043522450  0.2167327600   0.4047818 0.0389339500 -0.140081580
+118 0.030640325  0.0837294000   0.2186072 0.0229817740 -0.276271340
+119 0.087500006 -0.9742930500   1.2492931 0.0647793900 -0.861800970
+120 0.006249975  0.3518365300   0.5106635 0.0823087840 -1.134660700
+121 0.165019850  0.0815331860   1.1318668 0.0602127500 -0.101675145
+122 0.093972370  0.1042708800   0.6260891 0.0404081200 -0.154537320
+123 0.000000000            NA          NA 0.0000000000           NA
+124          NA            NA          NA           NA           NA
+125 0.031250020  0.0716808660   0.8658192 0.0790489540 -1.096500500
+126 0.102699980 -1.0951270000   1.5147269 0.0057358380 -0.333358440
+127 0.028195950  0.2800679000   0.4595321 0.0653235000 -0.300365030
+128          NA            NA          NA           NA           NA
+129 0.110184980 -1.1398480000   1.6602180 0.0906834000 -1.310983500
+130 0.091203480 -0.8426466000   1.4750535 0.0387791500 -0.551748930
+131 0.059094610  0.1303564500   0.4098296 0.0521247300 -0.209192400
+132 0.068969280  0.0042548320   0.5977566 0.0131412430 -0.283277600
+133 0.092163870 -0.0747101160   0.7183881 0.0657805200 -0.389038920
+134          NA            NA          NA           NA           NA
+135 0.000000000            NA          NA 0.0000000000           NA
+136 0.005682027  0.3084850000   0.4528790 0.0144021390 -0.170767620
+137 0.098975330  0.0646738260   0.9163868 0.0105615840 -0.031281628
+138 0.059816620  0.2559031800   0.5634302 0.0234056100 -0.070631330
+139          NA            NA          NA           NA           NA
+140 0.038804500  0.3030670600   0.5500535 0.0360455000 -0.058882967
+141 0.024999972  0.1573452400   0.7926547 0.0936753800 -1.105276100
+142 0.068750010 -0.5048017500   1.2423017 0.0877418400 -1.198261100
+143          NA            NA          NA           NA           NA
+144          NA            NA          NA           NA           NA
+145 0.012500022  0.1536721700   0.4713278 0.0035890618 -0.048692755
+146 0.170222490 -0.0740749600   1.3907416 0.0639354200 -0.193538030
+147          NA            NA          NA           NA           NA
+148 0.000000000            NA          NA 0.0000000000           NA
+149          NA            NA          NA           NA           NA
+150 0.046363150  0.3261787600   0.6212752 0.0331883000  0.031372720
+151 0.000000000            NA          NA 0.0000000000           NA
+152 0.045485900  0.1564833700   0.4459962 0.0503075500 -0.318213370
+153 0.010576974  0.1011838000   0.3699702 0.0637300460 -0.943710860
+154 0.056463800  0.2633830000   0.6227690 0.0731906000 -0.173863750
+155          NA            NA          NA           NA           NA
+156 0.095249970 -0.9055156000   1.5150156 0.0801106700 -1.057040100
+157          NA            NA          NA           NA           NA
+158 0.000000000            NA          NA 0.0000000000           NA
+159 0.051339930  0.2046953000   0.4414755 0.0641937300 -0.108479920
+160 0.043805845  0.1748044800   0.3676365 0.0439770900 -0.105064020
+161          NA            NA          NA           NA           NA
+162          NA            NA          NA           NA           NA
+163 0.031250020 -0.1033191300   0.6908191 0.1163358240 -1.368529400
+164 0.015942616  0.1901565200   0.2681769 0.0633826000 -0.087868440
+165 0.032504357  0.2114405300   0.3492529 0.0344461950 -0.066760570
+166 0.000000000            NA          NA 0.0000000000           NA
+167 0.073148030 -0.0165825600   0.6128786 0.0365447700 -0.187295060
+168 0.056041850  0.4542272700   0.7039653 0.0365357600  0.167374550
+169 0.014772521  0.1225248200   0.4979302 0.0023634336 -0.030220473
+170 0.011363489  0.0942496900   0.3830233 0.0165675110 -0.218384800
+171 0.012500022  0.2536721500   0.5713278 0.0851218700 -1.000800500
+172 0.115995094  0.0842466800   1.0824199 0.0796429900 -0.369495000
+173          NA            NA          NA           NA           NA
+174 0.000000000            NA          NA 0.0000000000           NA
+175 0.217269150 -0.3693671000   1.5003003 0.0719284900 -0.195028110
+176 0.000000000            NA          NA 0.0000000000           NA
+177 0.032882977  0.1289344100   0.2844462 0.0351947550 -0.272809180
+178 0.031817965 -0.3224676000   0.4861036 0.0885993500 -1.321161200
+179 0.139091010 -0.3764906200   0.8204300 0.0707054300 -0.410611000
+180 0.018581128  0.1136200400   0.1933252 0.0173325560 -0.252458240
+181          NA            NA          NA           NA           NA
+182          NA            NA          NA           NA           NA
+183          NA            NA          NA           NA           NA
+184 0.217650010 -2.3581557000   3.1728556 0.0584621730 -0.829817350
+185          NA            NA          NA           NA           NA
+186 0.085700030 -0.0544374500   0.6830375 0.0892068500 -0.413938300
+187          NA            NA          NA           NA           NA
+188          NA            NA          NA           NA           NA
+189          NA            NA          NA           NA           NA
+190 0.000000000            NA          NA 0.0000000000           NA
+191 0.024999972 -0.0176547670   0.6176547 0.0000000000           NA
+192 0.050895907  0.3873555000   0.6490197 0.0281723980  0.033319447
+193 0.093749985 -0.7224565000   1.6599565 0.0728423900 -1.074453700
+194 0.000000000            NA          NA 0.0000000000           NA
+195 0.000000000            NA          NA 0.0000000000           NA
+196 0.000000000            NA          NA 0.0000000000           NA
+197 0.000000000            NA          NA 0.0000000000           NA
+198 0.077764235  0.4755195700   0.8753182 0.0477377000  0.174669740
+199          NA            NA          NA           NA           NA
+200          NA            NA          NA           NA           NA
+201 0.126822500 -1.3141551000   1.9087101 0.0505398920 -0.528003700
+202 0.000000000  0.1818180000   0.1818180 0.0137079720 -0.050071098
+203 0.126278860 -0.0120673785   1.0746008 0.0124324880 -0.067504980
+204 0.106210410  0.1247424260   0.7145172 0.0894836000 -0.196810290
+205 0.060563307  0.3194987500   0.6059177 0.0355224270  0.080973600
+206 0.206250040 -2.2644053000   2.9769050 0.0003090764 -0.082789190
+207 0.064576860  0.3279384400   0.6439662 0.0261635310  0.128308640
+208 0.007499999  0.2222034800   0.4127965 0.0768970100 -1.060644700
+209          NA            NA          NA           NA           NA
+210          NA            NA          NA           NA           NA
+211          NA            NA          NA           NA           NA
+212 0.020222400  0.3378028000   0.4665162 0.0388957000 -0.160361480
+213 0.055794764  0.5156307000   0.8024807 0.0245929580  0.214819980
+214          NA            NA          NA           NA           NA
+215 0.038959770  0.1787137200   0.3950531 0.0474865700 -0.288769360
+216 0.000000000            NA          NA 0.0000000000           NA
+217          NA            NA          NA           NA           NA
+218 0.024999972 -0.0826547700   0.5526547 0.0006883685 -0.286281260
+219 0.129672650  0.2127737600   1.0381262 0.0233946000  0.043001942
+220 0.188977080 -0.0611027400   1.5651027 0.0443216230 -0.019167844
+221 0.000000000            NA          NA 0.0000000000           NA
+222 0.000000000            NA          NA 0.0000000000           NA
+223 0.000000000            NA          NA 0.0000000000           NA
+224 0.000000000            NA          NA 0.0000000000           NA
+225 0.000000000            NA          NA 0.0000000000           NA
+     ub_prespow2
+1   -0.091305200
+2    0.297666160
+3             NA
+4             NA
+5    0.921317160
+6    0.181978820
+7    0.228319260
+8    0.204331500
+9             NA
+10            NA
+11            NA
+12  -0.033282045
+13   0.501774550
+14            NA
+15   0.353774880
+16   0.575159700
+17   0.333546280
+18   0.921317160
+19  -0.020569813
+20   1.046841500
+21            NA
+22            NA
+23   1.047290000
+24   0.295466040
+25   0.739534600
+26  -0.045531080
+27            NA
+28            NA
+29            NA
+30            NA
+31   0.035430927
+32   0.051049072
+33   0.897430540
+34            NA
+35            NA
+36   0.456208880
+37   0.485225320
+38            NA
+39   0.837452050
+40   0.221135680
+41            NA
+42            NA
+43            NA
+44   0.283966750
+45            NA
+46            NA
+47            NA
+48  -0.004133487
+49            NA
+50   0.138020190
+51   0.014319133
+52            NA
+53   2.519804200
+54            NA
+55            NA
+56            NA
+57  -0.111962710
+58   0.139036330
+59            NA
+60            NA
+61            NA
+62   0.193309710
+63   0.242293300
+64   0.492550280
+65            NA
+66   0.069897704
+67   0.533924700
+68  -0.120907560
+69            NA
+70   1.173551800
+71   0.268290040
+72   0.112596220
+73            NA
+74            NA
+75            NA
+76   0.132981790
+77   2.184840000
+78            NA
+79   0.464781140
+80   0.353633300
+81            NA
+82            NA
+83            NA
+84   0.187367920
+85            NA
+86            NA
+87   0.023286793
+88   0.137236330
+89   0.029840073
+90            NA
+91   0.676215470
+92   0.175244030
+93   0.077449344
+94   0.561159250
+95            NA
+96            NA
+97            NA
+98   0.019398770
+99            NA
+100           NA
+101  1.706479800
+102           NA
+103  0.272373400
+104  0.171411020
+105           NA
+106           NA
+107           NA
+108           NA
+109  0.377137150
+110  0.300162970
+111  0.300348520
+112  1.767181000
+113           NA
+114 -0.233309250
+115           NA
+116           NA
+117  0.028141784
+118 -0.175106260
+119  0.784399570
+120  0.957003800
+121  0.281572550
+122  0.069844520
+123           NA
+124           NA
+125  0.912323900
+126 -0.187596960
+127  0.115412034
+128           NA
+129  0.993500300
+130  0.433722730
+131  0.037318400
+132 -0.170193200
+133  0.177022530
+134           NA
+135           NA
+136  0.195225420
+137  0.059604026
+138  0.049700733
+139           NA
+140  0.170542760
+141  1.275241100
+142  1.031470400
+143           NA
+144           NA
+145  0.042513955
+146  0.356645820
+147           NA
+148           NA
+149           NA
+150  0.242612690
+151           NA
+152  0.001988777
+153  0.675823300
+154  0.291986550
+155           NA
+156  0.978765130
+157           NA
+158           NA
+159  0.187582120
+160  0.088521816
+161           NA
+162           NA
+163  1.587844300
+164  0.222314830
+165  0.079284770
+166           NA
+167  0.127183850
+168  0.330188040
+169  0.029840073
+170  0.202635600
+171  1.162351300
+172  0.315857200
+173           NA
+174           NA
+175  0.423938500
+176           NA
+177 -0.106364430
+178  0.930361750
+179  0.197830810
+180 -0.178108960
+181           NA
+182           NA
+183           NA
+184  0.655847400
+185           NA
+186  0.353713900
+187           NA
+188           NA
+189           NA
+190           NA
+191           NA
+192  0.178158360
+193  0.776647000
+194           NA
+195           NA
+196           NA
+197           NA
+198  0.420097050
+199           NA
+200           NA
+201  0.756336700
+202  0.298281500
+203  0.039480377
+204  0.300082300
+205  0.248967990
+206 -0.074934810
+207  0.256348370
+208  0.893493700
+209           NA
+210           NA
+211           NA
+212  0.087205480
+213  0.341256400
+214           NA
+215 -0.025081644
+216           NA
+217           NA
+218 -0.268788160
+219  0.191906060
+220  0.362233250
+221           NA
+222           NA
+223           NA
+224           NA
+225           NA</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>final_dataset</span> <span class='op'>&lt;-</span> <span class='va'>pres_powers</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>inequality</span>, by <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"country"</span>, <span class='st'>"year"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>country</span>, <span class='va'>year</span>, <span class='va'>prespow1</span>, <span class='va'>gini_reported</span>, <span class='va'>regioncode</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/drop_na.html'>drop_na</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>regioncode</span> <span class='op'>==</span> <span class='st'>"Americas"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>final_dataset</span> <span class='op'>|&gt;</span></span>
+<span> <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Country"</span>, <span class='st'>"Year"</span>, <span class='st'>"Presidential Power"</span>, <span class='st'>"Gini Coefficient"</span>, <span class='st'>"Continent"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Country</th>
+<th style="text-align: right;">Year</th>
+<th style="text-align: right;">Presidential Power</th>
+<th style="text-align: right;">Gini Coefficient</th>
+<th style="text-align: left;">Continent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1983</td>
+<td style="text-align: right;">0.2887138</td>
+<td style="text-align: right;">40.40</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: right;">0.4070079</td>
+<td style="text-align: right;">45.30</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: right;">0.4070079</td>
+<td style="text-align: right;">43.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: right;">0.4070079</td>
+<td style="text-align: right;">51.50</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: right;">0.4070079</td>
+<td style="text-align: right;">45.92</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Argentina</td>
+<td style="text-align: right;">1994</td>
+<td style="text-align: right;">0.4070079</td>
+<td style="text-align: right;">43.80</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bolivia</td>
+<td style="text-align: right;">1995</td>
+<td style="text-align: right;">0.3191657</td>
+<td style="text-align: right;">52.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brazil</td>
+<td style="text-align: right;">1988</td>
+<td style="text-align: right;">0.4862688</td>
+<td style="text-align: right;">60.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Brazil</td>
+<td style="text-align: right;">1988</td>
+<td style="text-align: right;">0.4862688</td>
+<td style="text-align: right;">59.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Brazil</td>
+<td style="text-align: right;">1988</td>
+<td style="text-align: right;">0.4862688</td>
+<td style="text-align: right;">61.43</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Brazil</td>
+<td style="text-align: right;">1988</td>
+<td style="text-align: right;">0.4862688</td>
+<td style="text-align: right;">60.90</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chile</td>
+<td style="text-align: right;">1989</td>
+<td style="text-align: right;">0.5701563</td>
+<td style="text-align: right;">51.90</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Chile</td>
+<td style="text-align: right;">1989</td>
+<td style="text-align: right;">0.5701563</td>
+<td style="text-align: right;">57.30</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1960</td>
+<td style="text-align: right;">0.4162779</td>
+<td style="text-align: right;">59.20</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">0.3806180</td>
+<td style="text-align: right;">53.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">0.3806180</td>
+<td style="text-align: right;">57.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">0.3806180</td>
+<td style="text-align: right;">48.40</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">0.3806180</td>
+<td style="text-align: right;">51.32</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Colombia</td>
+<td style="text-align: right;">1991</td>
+<td style="text-align: right;">0.3806180</td>
+<td style="text-align: right;">56.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ecuador</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">0.5599205</td>
+<td style="text-align: right;">58.50</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ecuador</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">0.5599205</td>
+<td style="text-align: right;">56.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ecuador</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">0.5599205</td>
+<td style="text-align: right;">52.60</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ecuador</td>
+<td style="text-align: right;">1999</td>
+<td style="text-align: right;">0.5599205</td>
+<td style="text-align: right;">58.60</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">51.40</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">49.20</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">53.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">46.30</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">48.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">51.47</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">53.20</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">46.80</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">El Salvador</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">0.3732668</td>
+<td style="text-align: right;">50.30</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Haiti</td>
+<td style="text-align: right;">1987</td>
+<td style="text-align: right;">0.0663333</td>
+<td style="text-align: right;">51.50</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Panama</td>
+<td style="text-align: right;">1972</td>
+<td style="text-align: right;">0.4516847</td>
+<td style="text-align: right;">42.60</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Panama</td>
+<td style="text-align: right;">1972</td>
+<td style="text-align: right;">0.4516847</td>
+<td style="text-align: right;">41.90</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Panama</td>
+<td style="text-align: right;">1972</td>
+<td style="text-align: right;">0.4516847</td>
+<td style="text-align: right;">34.80</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Paraguay</td>
+<td style="text-align: right;">1992</td>
+<td style="text-align: right;">0.2719731</td>
+<td style="text-align: right;">45.80</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Uruguay</td>
+<td style="text-align: right;">1985</td>
+<td style="text-align: right;">0.3771197</td>
+<td style="text-align: right;">41.70</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Uruguay</td>
+<td style="text-align: right;">1985</td>
+<td style="text-align: right;">0.3771197</td>
+<td style="text-align: right;">41.20</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Venezuela</td>
+<td style="text-align: right;">2001</td>
+<td style="text-align: right;">0.3908991</td>
+<td style="text-align: right;">46.40</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Venezuela</td>
+<td style="text-align: right;">2001</td>
+<td style="text-align: right;">0.3908991</td>
+<td style="text-align: right;">44.10</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Venezuela</td>
+<td style="text-align: right;">2001</td>
+<td style="text-align: right;">0.3908991</td>
+<td style="text-align: right;">48.60</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Venezuela</td>
+<td style="text-align: right;">2001</td>
+<td style="text-align: right;">0.3908991</td>
+<td style="text-align: right;">48.22</td>
+<td style="text-align: left;">Americas</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Load necessary libraries</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
-<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
-<span><span class='va'>nonvoters</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"nonvoters_data.csv"</span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>nonvoters1</span> <span class='op'>&lt;-</span> <span class='va'>nonvoters</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>income_cat</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarise</a></span><span class='op'>(</span>Proportion_Not_Voting <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Q21</span> <span class='op'>==</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>visualisation_1</span> <span class='op'>&lt;-</span> <span class='va'>nonvoters1</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>income_cat <span class='op'>=</span> <span class='fu'><a href='https://forcats.tidyverse.org/reference/fct_relevel.html'>fct_relevel</a></span><span class='op'>(</span><span class='va'>income_cat</span>, <span class='st'>"Less than $40k"</span>, <span class='st'>"$40-75k"</span>, <span class='st'>"$75-125k"</span>, <span class='st'>"$125k or more"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>income_cat</span>, y <span class='op'>=</span> <span class='va'>Proportion_Not_Voting</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_col</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"Proportion of Non-Voters by Income Group"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Income Group"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Proportion Planned Not to Vote"</span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>visualisation_1</span></span></code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#(2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; </span></span>
+<span><span class='va'>final_dataset</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>year</span>, color <span class='op'>=</span> <span class='va'>country</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>gini_reported</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
+<img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>final_dataset</span></span></code></pre>
 </div>
-<h2 id="project-milestone-4-data-analysis">Project Milestone 4 Data Analysis</h2>
-<p>From the first analysis done in Milestone 3, with ‘Proportion of Non-Voters by Income Group’, I observed that as income decreases, the likelihood a respondent plans not to vote increases. The highest proportion of those who planned not to vote was 12.8% of respondents who made less than 40,000 a year. With my next analysis, ‘Non-Voter Beliefs about Voting Split by Income Group’, I aimed to see whether beliefs about voting differed between income groups. Using the variable Q29_3, I found that of those who do not vote, a much higher proportion agree with the statement “No matter who wins, nothing will change for people like me” and find this an important reason as to why they don’t vote. However, of those who resonate with this reason and those who don’t, the proportions of these groups in terms of income class do not differ greatly. This suggests that attitudes about belonging and change affect those of all income groups- a regression analysis would further reveal the correlation, or lack of correlation between income group and attitudes towards change based on identity groups. My next graph, ‘Respondents of different Income Groups Voting Choices’ reveals the different proportions of voting choice groups. The column graph illustrates that those in the income group ‘Less than 40k’ take up higher proportions of those who don’t, or sporadically vote than in always voting. This is in contrast to other income groups, which take up similar proportions of always, rarely/never and sporadic groups, demonstrating the disproportionate difference when it comes to the lowest income group not voting. This analysis shows that investigating reasons as to why people don’t vote will likely have a correlation to lower income groups, specifically those who make ‘Less than 40k’ a year.</p>
+<pre><code>       country year   prespow1 gini_reported regioncode
+1    Argentina 1983 0.28871378         40.40   Americas
+2    Argentina 1994 0.40700790         45.30   Americas
+3    Argentina 1994 0.40700790         43.10   Americas
+4    Argentina 1994 0.40700790         51.50   Americas
+5    Argentina 1994 0.40700790         45.92   Americas
+6    Argentina 1994 0.40700790         43.80   Americas
+7      Bolivia 1995 0.31916574         52.70   Americas
+8       Brazil 1988 0.48626882         60.70   Americas
+9       Brazil 1988 0.48626882         59.10   Americas
+10      Brazil 1988 0.48626882         61.43   Americas
+11      Brazil 1988 0.48626882         60.90   Americas
+12       Chile 1989 0.57015630         51.90   Americas
+13       Chile 1989 0.57015630         57.30   Americas
+14    Colombia 1960 0.41627790         59.20   Americas
+15    Colombia 1991 0.38061804         53.10   Americas
+16    Colombia 1991 0.38061804         57.70   Americas
+17    Colombia 1991 0.38061804         48.40   Americas
+18    Colombia 1991 0.38061804         51.32   Americas
+19    Colombia 1991 0.38061804         56.70   Americas
+20     Ecuador 1999 0.55992055         58.50   Americas
+21     Ecuador 1999 0.55992055         56.70   Americas
+22     Ecuador 1999 0.55992055         52.60   Americas
+23     Ecuador 1999 0.55992055         58.60   Americas
+24 El Salvador 2000 0.37326682         51.40   Americas
+25 El Salvador 2000 0.37326682         49.20   Americas
+26 El Salvador 2000 0.37326682         53.10   Americas
+27 El Salvador 2000 0.37326682         46.30   Americas
+28 El Salvador 2000 0.37326682         48.10   Americas
+29 El Salvador 2000 0.37326682         51.47   Americas
+30 El Salvador 2000 0.37326682         53.20   Americas
+31 El Salvador 2000 0.37326682         46.80   Americas
+32 El Salvador 2000 0.37326682         50.30   Americas
+33       Haiti 1987 0.06633326         51.50   Americas
+34      Panama 1972 0.45168470         42.60   Americas
+35      Panama 1972 0.45168470         41.90   Americas
+36      Panama 1972 0.45168470         34.80   Americas
+37    Paraguay 1992 0.27197307         45.80   Americas
+38     Uruguay 1985 0.37711972         41.70   Americas
+39     Uruguay 1985 0.37711972         41.20   Americas
+40   Venezuela 2001 0.39089915         46.40   Americas
+41   Venezuela 2001 0.39089915         44.10   Americas
+42   Venezuela 2001 0.39089915         48.60   Americas
+43   Venezuela 2001 0.39089915         48.22   Americas</code></pre>
+</div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>graph_1</span> <span class='op'>&lt;-</span> <span class='va'>final_dataset</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='va'>gini_reported</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>prespow1</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>prespow1</span><span class='op'>)</span>, method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>nonvoters</span> <span class='op'>&lt;-</span> <span class='va'>nonvoters</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>reason_disillusioned <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='va'>Q29_3</span> <span class='op'>==</span> <span class='fl'>1</span>, <span class='st'>"No matter who wins, nothing will change for people like me"</span>, <span class='st'>"Not an Important Factor"</span><span class='op'>)</span>, na.rm <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span> </span>
 <span></span>
-<span><span class='va'>graph_2</span> <span class='op'>&lt;-</span> <span class='va'>nonvoters</span><span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>reason_disillusioned</span> <span class='op'>!=</span> <span class='st'>'NA'</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>reason_disillusioned</span>, fill <span class='op'>=</span> <span class='va'>income_cat</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Non-Voters"</span>,</span>
-<span>       y <span class='op'>=</span> <span class='st'>"Number of Non-Voters"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Non-Voter Beliefs about Voting Split by Income Group"</span> <span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>graph_2</span></span></code></pre>
+<span><span class='va'>graph_1</span></span></code></pre>
 </div>
 <p><img src="index_files/figure-html5/unnamed-chunk-3-1.png" width="624" /></p>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>graph_3</span> <span class='op'>&lt;-</span> <span class='va'>nonvoters</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>mapping <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>voter_category</span>, fill <span class='op'>=</span> <span class='va'>income_cat</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>y <span class='op'>=</span> <span class='st'>"Number of Respondents"</span>,</span>
-<span>       x <span class='op'>=</span> <span class='st'>"Voting Choice"</span>,</span>
-<span>       title <span class='op'>=</span> <span class='st'>"Respondents of different Income Groups' Voting Choices"</span><span class='op'>)</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>project_regression</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>final_dataset</span>, <span class='va'>gini_reported</span> <span class='op'>~</span> <span class='va'>prespow1</span><span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://broom.tidymodels.org/'>broom</a></span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>graph_3</span></span></code></pre>
+<span><span class='fu'><a href='https://generics.r-lib.org/reference/glance.html'>glance</a></span><span class='op'>(</span><span class='va'>project_regression</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>r.squared</span>, <span class='va'>p.value</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>knitr</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/knitr/man/kable.html'>kable</a></span><span class='op'>(</span>col.names <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"R Squared"</span>, <span class='st'>"P Value"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-4-1.png" width="624" /></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">R Squared</th>
+<th style="text-align: right;">P Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.125396</td>
+<td style="text-align: right;">0.0198218</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>project_regression</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>final_dataset</span>, <span class='va'>gini_reported</span> <span class='op'>~</span> <span class='va'>prespow1</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/modelsummary/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span><span class='va'>project_regression</span>,</span>
+<span>                           statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"s.e. = {std.error}"</span>,</span>
+<span>                                         <span class='st'>"p = {p.value}"</span><span class='op'>)</span>,</span>
+<span>                           gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span><span class='op'>)</span></span></code></pre>
+</div>
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:center;">
+ (1)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+(Intercept)
+</td>
+<td style="text-align:center;">
+40.034
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 4.341
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+p = &lt;0.001
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+prespow1
+</td>
+<td style="text-align:center;">
+25.036
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+</td>
+<td style="text-align:center;">
+s.e. = 10.326
+</td>
+</tr>
+<tr>
+<td style="text-align:left;box-shadow: 0px 1.5px">
+</td>
+<td style="text-align:center;box-shadow: 0px 1.5px">
+p = 0.020
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Num.Obs.
+</td>
+<td style="text-align:center;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2
+</td>
+<td style="text-align:center;">
+0.125
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+R2 Adj.
+</td>
+<td style="text-align:center;">
+0.104
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -7,7 +7,7 @@ output:
     self_contained: false
 ---
 
-  ## Introduction
+## Introduction
 
 Is undemocratic government linked to weaker economic development of a country? This study aims to investigate the correlation between the concentration of presidential power and a country's economic performance, as measured by the Gini coefficient. My main hypothesis proposes that there is a positive correlation between greater presidential power and higher Gini coefficients, implying that nations with a more pronounced power imbalance tend to exhibit increased income inequality.
 
@@ -16,7 +16,7 @@ Throughout history, dictatorships and authoritarian regimes have experienced sev
 Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries. 
 
 
-  ## Data
+## Data
 (2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
 
 For the data section, you should 
@@ -30,7 +30,7 @@ For the data section, you should
     - plot visualizing main outcome of interest
 
 
-  ## Results
+## Results
 (3) a results section that contains a scatterplot, barplot, or boxplot of the main relationship of interest and output for the main regression of interest; and 
 
 - Results section: (8pts)
@@ -40,7 +40,7 @@ For the data section, you should
     
 For the results section, you should interpret (in plain English) the main coefficient of interest in your regression. You should also comment on the statistical significance of the estimated coefficient and whether or not you believe the coefficient to represent a causal effect.
 
-  ## Conclusion
+## Conclusion
 (4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect).
 - Conclusion section: 1 paragraph (2pts)
     - (i) summarizing results and assessing the extent to which you find support for your hypothesis;
@@ -49,6 +49,7 @@ For the results section, you should interpret (in plain English) the main coeffi
 
 
 ```{r}
+library(tidyverse)
 pres_powers <- read.csv("PrespowData_FINAL.csv")
 
 inequality <- read.csv("inequality.csv")
