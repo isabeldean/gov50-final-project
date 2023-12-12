@@ -49,9 +49,9 @@ For the results section, you should interpret (in plain English) the main coeffi
 
 
 ```{r}
-pres_powers <- read_csv("PrespowData_FINAL.csv")
+pres_powers <- read.csv("PrespowData_FINAL.csv")
 
-inequality <- read_csv("inequality.csv")
+inequality <- read.csv("inequality.csv")
 
 pres_powers
 
