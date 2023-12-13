@@ -1550,7 +1550,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Throughout history, dictatorships and authoritarian regimes have experienced severe economic hardships. By using presidential power as a lens to examine the illiberalism of a country and the Gini Index as a metric for economic development, I seek to examine the intrinsic links between political governance and economic outcomes. My null hypothesis suggests that there is no correlation between greater presidential power and economic development.</p>
 <p>Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries.</p>
 <h2 id="data">Data</h2>
-<p>My data is taken from two sources: (1) <a href="https://presidential-power.net/?page_id=2151">Presidential Power Scores</a> (Doyle, David and Robert Elgie. 2015. Maximizing the reliability of cross-national measures of presidential power. British Journal of Political Science, DOI: 10.1017/S0007123414000465) and (2) <a href="https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf">World Income Inequality Database</a> - WIID4 (UNU-WIDER, World Income Inequality Database (WIID), 19 December 2018). The explanatory variables of interest are Country, Year, Presidential Power, Gini Index and Continent. From Continent, I then selected from my data set countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Index, and my independent variable is Presidential Power. These have been measured through a survey.</p>
+<p>My data is taken from two sources: (1) <a href="https://presidential-power.net/?page_id=2151">Presidential Power Scores</a> and (2) <a href="https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf">World Income Inequality Database - WIID4</a>. The explanatory variables of interest are Country, Year, Presidential Power, Gini Index and Continent. From Continent, I then selected from my data set countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Index, and my independent variable is Presidential Power. These have been measured through a survey.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'>#Reading, Merging and Cleaning the Data set! </span></span>
@@ -1898,54 +1898,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span>       title <span class='op'>=</span> <span class='st'>"Latin American Income Inequality"</span>,</span>
 <span>       subtitle <span class='op'>=</span> <span class='st'>"(Nations have been measured at different points from 1960-2001)"</span><span class='op'>)</span></span></code></pre>
 </div>
-<img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" />
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>final_dataset</span></span></code></pre>
-</div>
-<pre><code>       country year   prespow1 gini_reported regioncode
-1    Argentina 1983 0.28871378         40.40   Americas
-2    Argentina 1994 0.40700790         45.30   Americas
-3    Argentina 1994 0.40700790         43.10   Americas
-4    Argentina 1994 0.40700790         51.50   Americas
-5    Argentina 1994 0.40700790         45.92   Americas
-6    Argentina 1994 0.40700790         43.80   Americas
-7      Bolivia 1995 0.31916574         52.70   Americas
-8       Brazil 1988 0.48626882         60.70   Americas
-9       Brazil 1988 0.48626882         59.10   Americas
-10      Brazil 1988 0.48626882         61.43   Americas
-11      Brazil 1988 0.48626882         60.90   Americas
-12       Chile 1989 0.57015630         51.90   Americas
-13       Chile 1989 0.57015630         57.30   Americas
-14    Colombia 1960 0.41627790         59.20   Americas
-15    Colombia 1991 0.38061804         53.10   Americas
-16    Colombia 1991 0.38061804         57.70   Americas
-17    Colombia 1991 0.38061804         48.40   Americas
-18    Colombia 1991 0.38061804         51.32   Americas
-19    Colombia 1991 0.38061804         56.70   Americas
-20     Ecuador 1999 0.55992055         58.50   Americas
-21     Ecuador 1999 0.55992055         56.70   Americas
-22     Ecuador 1999 0.55992055         52.60   Americas
-23     Ecuador 1999 0.55992055         58.60   Americas
-24 El Salvador 2000 0.37326682         51.40   Americas
-25 El Salvador 2000 0.37326682         49.20   Americas
-26 El Salvador 2000 0.37326682         53.10   Americas
-27 El Salvador 2000 0.37326682         46.30   Americas
-28 El Salvador 2000 0.37326682         48.10   Americas
-29 El Salvador 2000 0.37326682         51.47   Americas
-30 El Salvador 2000 0.37326682         53.20   Americas
-31 El Salvador 2000 0.37326682         46.80   Americas
-32 El Salvador 2000 0.37326682         50.30   Americas
-33       Haiti 1987 0.06633326         51.50   Americas
-34      Panama 1972 0.45168470         42.60   Americas
-35      Panama 1972 0.45168470         41.90   Americas
-36      Panama 1972 0.45168470         34.80   Americas
-37    Paraguay 1992 0.27197307         45.80   Americas
-38     Uruguay 1985 0.37711972         41.70   Americas
-39     Uruguay 1985 0.37711972         41.20   Americas
-40   Venezuela 2001 0.39089915         46.40   Americas
-41   Venezuela 2001 0.39089915         44.10   Americas
-42   Venezuela 2001 0.39089915         48.60   Americas
-43   Venezuela 2001 0.39089915         48.22   Americas</code></pre>
+<p><img src="index_files/figure-html5/unnamed-chunk-2-1.png" width="624" /></p>
 </div>
 <p>As the scatter plot shows, while we cannot see most of the individual progression of countries over time, income inequality is higher toward the last 15 years of the 20th century among Latin American countries. There is one notable outlier, being that Colombia in 1960 had a Gini Index of 59.20. This can likely be explained by contingent factors that won’t be explored further in this project. From this data set, the lowest Gini Index was Panama in 1972 at 34.80, and the highest was Brazil in 1988 at 61.43. For context, <a href="https://wol.iza.org/articles/measuring-income-inequality/long#:~:text=A%20Gini%20coefficient%20below%200.3,since%20the%201980s%20%5B10%5D.">“Economies with Gini values above (50) are considered very unequal… A Gini (Index) below (30) is considered low… (and) In most countries the Gini coefficient lies between (30 and (50). In many advanced economies, there has been an increase in income inequality since the 1980s.”</a></p>
 <h2 id="results">Results</h2>
@@ -2091,20 +2044,11 @@ R2 Adj.
 </tbody>
 </table>
 </div>
-<p>2-3 paragraphs of description and interpretation of the plots and regression (including interpreting the main coefficient of interest and describing if it is statistically significant and if we should interpret it causally).</p>
 <p>My regression scatterplot and line of best fit of Presidential Power plotted against the Gini Index reveal that there is a weak positive relationship between the two. The slope 0.125 illustrates that as as Presidential Power increases by 1 unit, income inequality rises on average by 0.125 units on the Gini Index. With an R Squared value less than 0.3, this correlation is weak, and above 0, positive, however this essentially shows that when Presidential Power is higher, income inequality tends to be somewhat higher as well.</p>
 <p>Because of this weak, positive correlation, this evidence alone is not enough to support the hypothesis that a greater Presidential Power has a causal relationship with income inequality. However, with a P-value that is below 0.05 at 0.02, these results are statistically significant. At the 0.05 significance level, it is a model that could lead us in the right direction, however does not show the full picture.</p>
 <h2 id="conclusion">Conclusion</h2>
-<ol start="4" type="1">
-<li>a brief (one paragraph) concluding section that</li>
-</ol>
-<ul>
-<li>summarizes your results,</li>
-<li>assesses the extent to which you find support for your hypothesis,</li>
-<li>describes limitations of your analysis and threats to inference, and</li>
-<li>states how your analysis could be improved (e.g., improved data that would be useful to collect).if you had more time/money.</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Overall, my null hypothesis was disproved: there was a positive correlation between higher Presidential Power and higher income inequality. Despite this relationship being statistically significant, with a low coefficient, this relationship is a weak one, which does not provide enough evidence to attribute a causal relationship. In this way, my main hypothesis can only be weakly supported, and provides further investigation on other fronts to prove. There were several limitations upon my analysis. First, a better model could have been used to assess the relationship between Presidential Power and Income Inequality- namely, a Differences in Differences Design would be able to show how changes in the levels of Presidential Power affect changes in Income Inequality, rather than measuring their relationship at a specific point in time. Further, there are multiple confounders that should be studied, such as economic growth, transnational economic influences, policy and government style outside of presidency, other democratic measures such as Freedom House and Polity IV. Through examining these, we may find stronger links between economic development and the state of democracy in nations. To improve my analysis, I would analyse countries over time, investigating how the increase of Presidential Power over a time period correlates with the increase in income inequality. I would then compare these differences across countries to examine whether there is a similar pattern across nations.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
