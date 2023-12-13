@@ -15,7 +15,7 @@ Throughout history, dictatorships and authoritarian regimes have experienced sev
 Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries. 
 
 ## Data
-My data is taken from two sources: (1) [Presidential Power Scores](https://presidential-power.net/?page_id=2151) (Doyle, David and Robert Elgie. 2015. Maximizing the reliability of cross-national measures of presidential power. British Journal of Political Science, DOI: 10.1017/S0007123414000465) and (2) [World Income Inequality Database](https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf) - WIID4 (UNU-WIDER, World Income Inequality Database (WIID), 19 December 2018). The explanatory variables of interest are Country, Year, Presidential Power, Gini Index and Continent. From Continent, I then selected from my data set countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Index, and my independent variable is Presidential Power. These have been measured through a survey. 
+My data is taken from two sources: (1) [Presidential Power Scores](https://presidential-power.net/?page_id=2151) and (2) [World Income Inequality Database - WIID4](https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf). The explanatory variables of interest are Country, Year, Presidential Power, Gini Index and Continent. From Continent, I then selected from my data set countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Index, and my independent variable is Presidential Power. These have been measured through a survey. 
 
 ```{r}
 #Reading, Merging and Cleaning the Data set! 
@@ -48,8 +48,6 @@ final_dataset |>
        y = "Gini Index",
        title = "Latin American Income Inequality",
        subtitle = "(Nations have been measured at different points from 1960-2001)")
-
-final_dataset
 ```
 
 As the scatter plot shows, while we cannot see most of the individual progression of countries over time, income inequality is higher toward the last 15 years of the 20th century among Latin American countries. There is one notable outlier, being that Colombia in 1960 had a Gini Index of 59.20. This can likely be explained by contingent factors that won't be explored further in this project. From this data set, the lowest Gini Index was Panama in 1972	at 34.80, and the highest was Brazil in 1988 at 61.43. For context, ["Economies with Gini values above (50) are considered very unequal... A Gini (Index) below (30) is considered low... (and) In most countries the Gini coefficient lies between (30 and (50). In many advanced economies, there has been an increase in income inequality since the 1980s."](https://wol.iza.org/articles/measuring-income-inequality/long#:~:text=A%20Gini%20coefficient%20below%200.3,since%20the%201980s%20%5B10%5D.) 
@@ -98,8 +96,6 @@ modelsummary::modelsummary(project_regression,
                            gof_map = c("nobs", "r.squared", "adj.r.squared"))
 
 ```
-
-2-3 paragraphs of description and interpretation of the plots and regression (including interpreting the main coefficient of interest and describing if it is statistically significant and if we should interpret it causally). 
 
 My regression scatterplot and line of best fit of Presidential Power plotted against the Gini Index reveal that there is a weak positive relationship between the two. The slope 0.125 illustrates that as as Presidential Power increases by 1 unit, income inequality rises on average by 0.125 units on the Gini Index. With an R Squared value less than 0.3, this correlation is weak, and above 0, positive, however this essentially shows that when Presidential Power is higher, income inequality tends to be somewhat higher as well. 
 
