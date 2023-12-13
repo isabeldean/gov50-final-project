@@ -8,109 +8,117 @@ output:
 ---
 
 ## Introduction
+Is undemocratic government linked to weaker economic development of a country? This study aims to investigate the correlation between the concentration of presidential power and a country's economic performance, as measured by the Gini Index. My main hypothesis proposes that there is a positive correlation between greater presidential power and higher Gini Index, implying that nations with a more pronounced power imbalance tend to exhibit increased income inequality.
 
-Is undemocratic government linked to weaker economic development of a country? This study aims to investigate the correlation between the concentration of presidential power and a country's economic performance, as measured by the Gini coefficient. My main hypothesis proposes that there is a positive correlation between greater presidential power and higher Gini coefficients, implying that nations with a more pronounced power imbalance tend to exhibit increased income inequality.
-
-Throughout history, dictatorships and authoritarian regimes have experienced severe economic hardships. By using presidential power as a lens to examine the illiberalism of a country and the Gini coefficient as a metric for economic development, I seek to examine the intrinsic links between political governance and economic outcomes. My null hypothesis suggests that there is no correlation between greater presidential power and economic development.
+Throughout history, dictatorships and authoritarian regimes have experienced severe economic hardships. By using presidential power as a lens to examine the illiberalism of a country and the Gini Index as a metric for economic development, I seek to examine the intrinsic links between political governance and economic outcomes. My null hypothesis suggests that there is no correlation between greater presidential power and economic development.
 
 Understanding this relationship is vital due to its potential implications for governance, social equity, and economic prosperity. Dictatorships and authoritarian regimes have historically grappled with economic challenges; by exploring the connection between concentrated political power and economic development we can discover the true impact of democracy on the economic well being of a country. To truly understand the links between democracy and economy, it is significant to explore other factors of economic growth, GNP per capita, GDP, trade and more. Further, we must consider that measures of democracy are difficult to observe- presidential power is one lens through which I have considered the spread and balance of liberalism across countries. 
 
-
 ## Data
-My data is taken from two sources: (1) [Presidential Power Scores](https://presidential-power.net/?page_id=2151) (Doyle, David and Robert Elgie. 2015. Maximizing the reliability of cross-national measures of presidential power. British Journal of Political Science, DOI: 10.1017/S0007123414000465) and (2) [World Income Inequality Database](https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf) - WIID4 (UNU-WIDER, World Income Inequality Database (WIID), 19 December 2018). The explanatory variables of interest are Country, Year, Presidential Power, Gini Coefficient and Continent. From Continent, I then selected from my dataset countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Coefficient, and my independent variable is Presidential Power. These have been measured through a survey. 
-
-Through my cross-sectional design, I hope to analyse the correlation between Presidential Power and higher Gini Coefficients across Latin American countries in the same year, which I have achieved through merging my data sets, joining through country and year. The variables I am measuring are continuous- Presidential Power is measured on a scale of 0-1, with 1 being total Presidential power, whilst the Gini Coefficient is measured on a scale of 0-100, with 100 being complete income inequality. 
-
-
-
-(2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
-
-For the data section, you should 
-
-- note if your research design is cross-sectional (most projects will be of this type) or one of the other designs we discussed (randomized experiment, before-and-after, differences-in-differences). CR4OSS. SECTIONINAL
-- Data section: (3pts)
-    - 2-3 paragraphs
-        - INDEPENDENT- PRES POWER
-        - DEPENDENDT- INCOME INEQUALITY
-        - survey
-    - plot visualizing main outcome of interest
-
-
-## Results
-(3) a results section that contains a scatterplot, barplot, or boxplot of the main relationship of interest and output for the main regression of interest; and 
-
-- Results section: (8pts)
-    - plot of main analysis
-    - regression output
-    - 2-3 paragraphs of description and interpretation of the plots and regression (including interpreting the main coefficient of interest and describing if it is statistically significant and if we should interpret it causally). This section could be longer if you choose to include additional analyses.
-    
-For the results section, you should interpret (in plain English) the main coefficient of interest in your regression. You should also comment on the statistical significance of the estimated coefficient and whether or not you believe the coefficient to represent a causal effect.
-
-## Conclusion
-(4) a brief (one paragraph) concluding section that summarizes your results, assesses the extent to which you find support for your hypothesis, describes limitations of your analysis and threats to inference, and states how your analysis could be improved (e.g., improved data that would be useful to collect).
-- Conclusion section: 1 paragraph (2pts)
-    - (i) summarizing results and assessing the extent to which you find support for your hypothesis;
-    - (ii) describing limitations of the analysis and threats to inference (missing data, confounding, etc), and stating how you could improve your analysis if you had more time/money.
-
-
+My data is taken from two sources: (1) [Presidential Power Scores](https://presidential-power.net/?page_id=2151) (Doyle, David and Robert Elgie. 2015. Maximizing the reliability of cross-national measures of presidential power. British Journal of Political Science, DOI: 10.1017/S0007123414000465) and (2) [World Income Inequality Database](https://www.wider.unu.edu/sites/default/files/WIID/PDF/WIID4%20User%20Guide.pdf) - WIID4 (UNU-WIDER, World Income Inequality Database (WIID), 19 December 2018). The explanatory variables of interest are Country, Year, Presidential Power, Gini Index and Continent. From Continent, I then selected from my data set countries in Latin America, so as to maintain a similar standard across countries with similar countries and external factors- this way I could avoid as much confoundment as possible. My key dependent variable is income inequality, which is the Gini Index, and my independent variable is Presidential Power. These have been measured through a survey. 
 
 ```{r}
+#Reading, Merging and Cleaning the Data set! 
+
 library(tidyverse)
+library(ggplot2)
 pres_powers <- read.csv("PrespowData_FINAL.csv")
 
 inequality <- read.csv("inequality.csv")
 
-pres_powers
-
-final_dataset <- pres_powers |> left_join(
-  inequality, by = c("country", "year")
-) |>
+final_dataset <- pres_powers |> 
+  left_join(inequality, by = c("country", "year")) |>
   select(country, year, prespow1, gini_reported, regioncode) |>
   drop_na() |>
   filter(regioncode == "Americas")
 
 final_dataset |>
- knitr::kable(col.names = c("Country", "Year", "Presidential Power", "Gini Coefficient", "Continent"))
-
+ knitr::kable(col.names = c("Country", "Year", "Presidential Power", "Gini Index", "Continent"))
 ```
 
+Through my cross-sectional design, I hope to analyse the correlation between Presidential Power and higher Gini Coefficients across Latin American countries in the same year, which I have achieved through merging my data sets, joining through country and year. The variables I am measuring are continuous- Presidential Power is measured on a scale of 0-1, with 1 being total Presidential power, whilst the Gini Coefficient is measured on a scale of 0-100, with 100 being complete income inequality. 
+
 ```{r}
-#(2) a data section that briefly describes the data source, describes how the key dependent and independent variables are measured (e.g., a survey, statistical model, or expert coding), and also produces a plot that summarizes the dependent variable; 
+#A Plot Summarizing Income Inequality Across Countries 
+
 final_dataset |>
   ggplot(mapping = aes(x = year, color = country)) +
-  geom_point(mapping = aes(y = gini_reported))
+  geom_point(mapping = aes(y = gini_reported)) +
+  labs(x = "Year", 
+       y = "Gini Index",
+       title = "Latin American Income Inequality",
+       subtitle = "(Nations have been measured at different points from 1960-2001)")
 
 final_dataset
 ```
 
+As the scatter plot shows, while we cannot see most of the individual progression of countries over time, income inequality is higher toward the last 15 years of the 20th century among Latin American countries. There is one notable outlier, being that Colombia in 1960 had a Gini Index of 59.20. This can likely be explained by contingent factors that won't be explored further in this project. From this data set, the lowest Gini Index was Panama in 1972	at 34.80, and the highest was Brazil in 1988 at 61.43. For context, ["Economies with Gini values above (50) are considered very unequal... A Gini (Index) below (30) is considered low... (and) In most countries the Gini coefficient lies between (30 and (50). In many advanced economies, there has been an increase in income inequality since the 1980s."](https://wol.iza.org/articles/measuring-income-inequality/long#:~:text=A%20Gini%20coefficient%20below%200.3,since%20the%201980s%20%5B10%5D.) 
+
+## Results
 ```{r}
-graph_1 <- final_dataset |>
+#Scatterplot of Main Relationship of Interest
+
+main_regression <- final_dataset |>
   ggplot(mapping = aes(y = gini_reported)) +
   geom_point(mapping = aes(x = prespow1)) +
-  geom_smooth(mapping = aes(x = prespow1), method = "lm", se = FALSE)
+  geom_smooth(mapping = aes(x = prespow1), method = "lm", se = FALSE) +
+  labs(x = "Presidential Power",
+       y = "Gini Index",
+       title = "The Relationship between Presidential Power and the Gini Index")
 
-
-graph_1
+main_regression
 ```
-```{r}
-project_regression <- lm(data = final_dataset, gini_reported ~ prespow1)
-```
 
 ```{r}
+#R Squared and P Value
+
 library(broom)
+
+project_regression <- lm(data = final_dataset, gini_reported ~ prespow1)
 
 glance(project_regression) |>
   select(r.squared, p.value) |>
-  knitr::kable(col.names = c("R Squared", "P Value"))
+  knitr::kable(digits = 3, col.names = c("R Squared", "P Value"))
 ```
 
 ```{r}
+#Regression 
+
 project_regression <- lm(data = final_dataset, gini_reported ~ prespow1)
+
+var_labels <- c(
+  "(Intercept)" = "Intercept",
+  "prespow1" = "Presidential Power"
+  ) 
 
 modelsummary::modelsummary(project_regression,
                            statistic = c("s.e. = {std.error}",
                                          "p = {p.value}"),
+                           coef_map = var_labels,
                            gof_map = c("nobs", "r.squared", "adj.r.squared"))
+
 ```
+
+2-3 paragraphs of description and interpretation of the plots and regression (including interpreting the main coefficient of interest and describing if it is statistically significant and if we should interpret it causally). 
+
+My regression scatterplot and line of best fit of Presidential Power plotted against the Gini Index reveal that there is a weak positive relationship between the two. The slope 0.125 illustrates that as as Presidential Power increases by 1 unit, income inequality rises on average by 0.125 units on the Gini Index. With an R Squared value less than 0.3, this correlation is weak, and above 0, positive, however this essentially shows that when Presidential Power is higher, income inequality tends to be somewhat higher as well. 
+
+Because of this weak, positive correlation, this evidence alone is not enough to support the hypothesis that a greater Presidential Power has a causal relationship with income inequality. However, with a P-value that is below 0.05 at 0.02, these results are statistically significant. At the 0.05 significance level, it is a model that could lead us in the right direction, however does not show the full picture. 
+
+## Conclusion
+
+(4) a brief (one paragraph) concluding section that 
+- summarizes your results, 
+- assesses the extent to which you find support for your hypothesis, 
+- describes limitations of your analysis and threats to inference, and 
+- states how your analysis could be improved (e.g., improved data that would be useful to collect).if you had more time/money.
+
+
+
+
+
+
+
+
 
 
